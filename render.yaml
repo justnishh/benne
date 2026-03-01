@@ -1,0 +1,8 @@
+build:
+  publish: .
+  command: ""
+services:
+  - type: web
+    name: benne-website
+    buildCommand: ""
+    staticPublishDirectory: .
