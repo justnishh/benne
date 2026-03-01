@@ -1198,11 +1198,11 @@ h1, h2, h3, h4 {
    ======================================== */
 @media (max-width: 968px) {
     .footer-grid {
-        grid-template-columns: 1fr 1fr;
+        flex-wrap: wrap; flex-direction: column; 1fr 1fr;
     }
     
     .gallery-grid {
-        grid-template-columns: repeat(3, 1fr);
+        flex-wrap: wrap; flex-direction: column; repeat(3, 1fr);
     }
 }
 
@@ -1244,7 +1244,7 @@ h1, h2, h3, h4 {
     }
     
     .footer-grid {
-        grid-template-columns: 1fr;
+        flex-wrap: wrap; flex-direction: column; 1fr;
         text-align: center;
     }
     
@@ -1267,7 +1267,7 @@ h1, h2, h3, h4 {
     }
     
     .gallery-grid {
-        grid-template-columns: repeat(2, 1fr);
+        flex-wrap: wrap; flex-direction: column; repeat(2, 1fr);
     }
     
     .form-row {
@@ -1303,11 +1303,11 @@ h1, h2, h3, h4 {
     
     
     .offers-grid {
-        grid-template-columns: 1fr;
+        flex-wrap: wrap; flex-direction: column; 1fr;
     }
     
     .gallery-grid {
-        grid-template-columns: repeat(2, 1fr);
+        flex-wrap: wrap; flex-direction: column; repeat(2, 1fr);
     }
 }
 
@@ -1456,3 +1456,4 @@ h1, h2, h3, h4 {
 .popup-btn:hover {
     background-color: var(--filter-coffee);
 }
+
