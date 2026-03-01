@@ -9,9 +9,256 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
 <body>
-    <div id="app"></div>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="#" class="logo">
+                <img src="images/Benne_logo-02.png" alt="Benne" class="logo-img">
+            </a>
+            <button class="mobile-menu-btn" id="mobileMenuBtn">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <div class="nav-links" id="navLinks">
+                <a href="#menu">Menu</a>
+                <a href="#locations">Locations</a>
+                <a href="#offers">Offers</a>
+                <a href="#reserve" class="btn btn-primary">Reserve</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-bg">
+            <img src="images/hero-dosa.svg" alt="">
+        </div>
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <h1 class="hero-title">BENNE</h1>
+            <p class="hero-subtitle">Filter Coffee. Dosas. Mumbai Heart.</p>
+            <div class="hero-ctas">
+                <a href="#menu" class="btn btn-primary">View Menu</a>
+                <a href="#reserve" class="btn btn-secondary">Reserve Table</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about section" id="about">
+        <div class="container">
+            <h2 class="section-title">It Started With Missing</h2>
+            <p class="story-text">Two Bangaloreans in Mumbai. A craving that wouldn't quit. What began as a quest for the perfect dosa became a love letter to South Indian breakfast culture — now served in Mumbai & Delhi.</p>
+            <p class="story-text">We don't call ourselves a café. We call it bringing Bangalore to you.</p>
+        </div>
+    </section>
+
+    <!-- Featured Menu -->
+    <section class="featured section" id="menu">
+        <div class="container">
+            <h2 class="section-title">Our Menu</h2>
+            <p class="section-subtitle">Handmade dosas, filter coffee & Bangalore classics</p>
+            <div class="menu-scroll" id="menuScroll">
+                <!-- Menu items will be loaded by data-loader.js -->
+                <div class="featured-card">
+                    <div class="featured-img">
+                        <img src="images/menu-dosa.svg" alt="Benne Dosa">
+                    </div>
+                    <h3>Benne Dosa</h3>
+                    <p>The signature classic</p>
+                    <span class="price">?180</span>
+                    <span class="badge-popular">? SIGNATURE</span>
+                </div>
+                <div class="featured-card">
+                    <div class="featured-img">
+                        <img src="images/menu-dosa.svg" alt="Masala Dosa">
+                    </div>
+                    <h3>Masala Dosa</h3>
+                    <p>Classic & perfect</p>
+                    <span class="price">?160</span>
+                </div>
+                <div class="featured-card">
+                    <div class="featured-img">
+                        <img src="images/menu-dosa.svg" alt="Filter Coffee">
+                    </div>
+                    <h3>Filter Coffee</h3>
+                    <p>Poured from height</p>
+                    <span class="price">?40</span>
+                </div>
+                <div class="featured-card">
+                    <div class="featured-img">
+                        <img src="images/menu-coffee.svg" alt="Iced Filter Coffee">
+                    </div>
+                    <h3>Iced Filter Coffee</h3>
+                    <p>Chilled perfection</p>
+                    <span class="price">?60</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Offers -->
+    <section class="offers section" id="offers">
+        <div class="container">
+            <h2 class="section-title">Current Offers</h2>
+            <div class="offers-grid">
+                <div class="offer-card">
+                    <span class="offer-badge">NEW</span>
+                    <h3>Cold Filter Coffee</h3>
+                    <p>Summer's best kept secret is finally here</p>
+                </div>
+                <div class="offer-card">
+                    <span class="offer-badge">LIMITED</span>
+                    <h3>Filter Season</h3>
+                    <p>Buy 2 Filter Coffees, Get 1 Free</p>
+                </div>
+                <div class="offer-card">
+                    <span class="offer-badge">MEMBERS</span>
+                    <h3>Loyalty Rewards</h3>
+                    <p>Earn points with every visit</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Locations -->
+    <section class="locations section" id="locations">
+        <div class="container">
+            <h2 class="section-title">Find Your Benne</h2>
+            <div class="locations-grid">
+                <div class="location-card">
+                    <h3>Delhi</h3>
+                    <p class="location-address">Ground floor, 82, Block M, Greater Kailash II</p>
+                    <p class="location-hours">Open Daily • 10AM - 10PM</p>
+                    <a href="https://maps.google.com/?q=Benne+Delhi" target="_blank" class="btn btn-small">Get Directions ?</a>
+                </div>
+                <div class="location-card">
+                    <h3>Juhu</h3>
+                    <p class="location-address">Ground floor, Nirav apartment, Gulmohar Rd</p>
+                    <p class="location-hours">Open Daily • 10AM - 10PM</p>
+                    <a href="https://maps.google.com/?q=Benne+Juhu" target="_blank" class="btn btn-small">Get Directions ?</a>
+                </div>
+                <div class="location-card">
+                    <h3>Bandra</h3>
+                    <p class="location-address">Shop no. 1, plot 85, TPS 3, 16th Rd</p>
+                    <p class="location-hours">Open Daily • 10AM - 10PM</p>
+                    <a href="https://maps.google.com/?q=Benne+Bandra" target="_blank" class="btn btn-small">Get Directions ?</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Social Proof -->
+    <section class="social-proof section">
+        <div class="container">
+            <h2 class="section-title">What People Say</h2>
+            <div class="reviews-track" id="reviewsTrack">
+                <div class="review-card">
+                    <div class="review-stars">?????</div>
+                    <p class="review-text">"Best dosa I've had in Mumbai. The sambar alone is worth the visit."</p>
+                    <p class="review-author">— Rahul S.</p>
+                    <p class="review-role">Digital Marketer</p>
+                </div>
+                <div class="review-card">
+                    <div class="review-stars">?????</div>
+                    <p class="review-text">"Finally, a place that gets Bengaluru breakfast right. The filter coffee is authentic."</p>
+                    <p class="review-author">— Priya K.</p>
+                    <p class="review-role">Software Engineer</p>
+                </div>
+                <div class="review-card">
+                    <div class="review-stars">?????</div>
+                    <p class="review-text">"Their benne dosa brings back so many childhood memories. Crispy, buttery, perfect."</p>
+                    <p class="review-author">— Arjun M.</p>
+                    <p class="review-role">Business Analyst</p>
+                </div>
+            </div>
+            <div class="reviews-nav" id="reviewsNav"></div>
+        </div>
+    </section>
+
+    <!-- Reservation -->
+    <section class="reserve-cta section" id="reserve">
+        <div class="container">
+            <h2>Reserve Your Table</h2>
+            <p>Join us for an authentic South Indian experience</p>
+            <form class="reserve-form">
+                <input type="date" id="date" required>
+                <select id="time" required>
+                    <option value="">Select Time</option>
+                    <option value="10:00">10:00 AM</option>
+                    <option value="11:00">11:00 AM</option>
+                    <option value="12:00">12:00 PM</option>
+                    <option value="13:00">1:00 PM</option>
+                    <option value="14:00">2:00 PM</option>
+                    <option value="18:00">6:00 PM</option>
+                    <option value="19:00">7:00 PM</option>
+                    <option value="20:00">8:00 PM</option>
+                </select>
+                <select id="guests" required>
+                    <option value="">Guests</option>
+                    <option value="2">2 People</option>
+                    <option value="3">3 People</option>
+                    <option value="4">4 People</option>
+                    <option value="5">5 People</option>
+                    <option value="6">6+ People</option>
+                </select>
+                <button type="submit" class="btn btn-primary">Find Table</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Instagram Section -->
+    <section class="insta section">
+        <div class="container">
+            <div class="insta-profile">
+                <h2 class="insta-handle">@benne.bombay</h2>
+                <p class="insta-bio">Heritage Dosa • Filter Coffee</p>
+                <p class="insta-location">Mumbai & Delhi</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <img src="images/Benne_logo-02.png" alt="Benne" class="logo">
+                    <p>Filter Coffee. Dosas. Mumbai Heart.</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#menu">Menu</a></li>
+                        <li><a href="#locations">Locations</a></li>
+                        <li><a href="#offers">Offers</a></li>
+                        <li><a href="#reserve">Reservations</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Contact</h4>
+                    <ul>
+                        <li><a href="mailto:hello@benne.in">hello@benne.in</a></li>
+                        <li><a href="tel:+918012345678">+91 8012 345 678</a></li>
+                    </ul>
+                </div>
+                <div class="footer-social">
+                    <h4>Follow Us</h4>
+                    <div class="social-links">
+                        <a href="https://instagram.com/benne.bombay" target="_blank"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2026 Benne. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
     <script src="js/data-loader.js"></script>
     <script src="js/main.js"></script>
 </body>
