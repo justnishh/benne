@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Offers - Benne Admin</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/admin.css">
+    <link rel="icon" href="../../images/favicon.svg">
+</head>
+<body>
+    <div class="admin-wrapper">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <a href="../dashboard.html" class="logo">
+                    <img src="../../images/Benne_logo-02.png" alt="Benne">
+                </a>
+            </div>
+            
+            <nav class="sidebar-nav">
+                <a href="../dashboard.html" class="nav-item">
+                    <span class="icon">*</span>
+                    Dashboard
+                </a>
+                <a href="menu.html class="nav-item">
+                    <span class="icon">???</span>
+                    Menu Items
+                </a>
+                <a href="offers.html class="nav-item active">
+                    <span class="icon">*</span>
+                    Offers
+                </a>
+                <a href="locations.html class="nav-item">
+                    <span class="icon">*</span>
+                    Locations
+                </a>
+                <a href="reviews.html class="nav-item">
+                    <span class="icon">*</span>
+                    Reviews
+                </a>
+                <a href="homepage.html class="nav-item">
+                    <span class="icon">*</span>
+                    Homepage
+                </a>
+                <a href="reservations.html class="nav-item">
+                    <span class="icon">*</span>
+                    Reservations
+                </a>
+                <a href="newsletter.html class="nav-item">
+                    <span class="icon">*</span>
+                    Newsletter
+                </a>
+                <a href="settings.html class="nav-item">
+                    <span class="icon">*</span>
+                    Settings
+                </a>
+            </nav>
+            
+            <div class="sidebar-footer">
+                <a href="#" class="nav-item logout" onclick="logout(); return false;">
+                    <span class="icon">📅</span>
+                    Logout
+                </a>
+            </div>
+        </aside>
+        
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Header -->
+            <header class="top-header">
+                <div class="header-title">
+                    <h1>Offers & Promotions</h1>
+                    <p>Manage special offers and promotions</p>
+                </div>
+                <div class="header-actions">
+                    <button class="btn btn-primary" onclick="openModal()">
+                        ? Create Offer
+                    </button>
+                </div>
+            </header>
+            
+            <!-- Content -->
+            <div class="content">
+                <!-- Offers Grid -->
+                <div class="card">
+                    <div class="card-header">
+                        <h2>Active Offers</h2>
+                    </div>
+                    <div class="card-body">
+                        <div id="offersGrid" style="display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 20px;">
+                            <!-- Offers will be loaded here -->
+                        </div>
+                        
+                        <!-- Empty State -->
+                        <div class="empty-state" id="emptyState" style="display: none;">
+                            <div class="icon">??</div>
+                            <h3>No offers yet</h3>
+                            <p>Create your first offer to attract customers.</p>
+                            <button class="btn btn-primary" onclick="openModal()">Create Offer</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+    
+    <!-- Add/Edit Modal -->
+    <div class="modal-overlay" id="offerModal">
+        <div class="modal">
+            <div class="modal-header">
+                <h2 id="modalTitle">Create Offer</h2>
+                <button class="modal-close" onclick="closeModal()">&times;</button>
+            </div>
+            <div class="modal-body">
+                <form id="offerForm">
+                    <input type="hidden" id="offerId">
+                    
+                    <div class="form-group">
+                        <label for="offerTitle">Offer Title *</label>
+                        <input type="text" id="offerTitle" required placeholder="e.g., Cold Filter Coffee">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="offerDescription">Description</label>
+                        <textarea id="offerDescription" placeholder="What's special about this offer?"></textarea>
+                    </div>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="offerBadge">Badge</label>
+                            <select id="offerBadge">
+                                <option value="">No Badge</option>
+                                <option value="NEW">NEW</option>
+                                <option value="LIMITED">LIMITED</option>
+                                <option value="MEMBERS">MEMBERS</option>
+                                <option value="SALE">SALE</option>
+                                <option value="HOT">HOT</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label>Active Status</label>
+                            <label class="toggle">
+                                <input type="checkbox" id="offerActive" checked>
+                                <span class="toggle-slider"></span>
+                            </label>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-secondary" onclick="closeModal()">Cancel</button>
+                <button class="btn btn-primary" onclick="saveOffer()">Save Offer</button>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Delete Confirmation Modal -->
+    <div class="modal-overlay" id="deleteModal">
+        <div class="modal" style="max-width: 400px;">
+            <div class="modal-header">
+                <h2>Delete Offer</h2>
+                <button class="modal-close" onclick="closeDeleteModal()">&times;</button>
+            </div>
+            <div class="modal-body">
+                <p>Are you sure you want to delete <strong id="deleteOfferName"></strong>?</p>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-secondary" onclick="closeDeleteModal()">Cancel</button>
+                <button class="btn btn-danger" onclick="confirmDelete()">Delete</button>
+            </div>
+        </div>
+    </div>
+    
+    <script src="../../js/auth.js"></script>
+    <script>
+        checkAuth();
+        
+        let offers = [];
+        let deleteOfferId = null;
+        
+        document.addEventListener('DOMContentLoaded', function() {
+            loadOffers();
+        });
+        
+        function loadOffers() {
+            offers = getData('benneOffers', []);
+            renderOffers();
+        }
+        
+        function renderOffers() {
+            const grid = document.getElementById('offersGrid');
+            const emptyState = document.getElementById('emptyState');
+            
+            if (offers.length === 0) {
+                grid.innerHTML = '';
+                emptyState.style.display = 'block';
+                return;
+            }
+            
+            emptyState.style.display = 'none';
+            grid.innerHTML = offers.map(offer => `
+                <div style="background: var(--coconut-white); border-radius: 12px; padding: 20px; position: relative;">
+                    <div style="display: flex; justify-content: space-between; align-items: start; margin-bottom: 12px;">
+                        <div>
+                            <span class="badge ${offer.active ? 'badge-success' : 'badge-danger'}" style="margin-bottom: 8px;">
+                                ${offer.active ? 'Active' : 'Inactive'}
+                            </span>
+                            ${offer.badge ? `<span class="badge badge-warning">${offer.badge}</span>` : ''}
+                        </div>
+                        <div class="table-actions">
+                            <button class="btn btn-secondary btn-sm" onclick="editOffer(${offer.id})">??</button>
+                            <button class="btn btn-danger btn-sm" onclick="deleteOffer(${offer.id})">???</button>
+                        </div>
+                    </div>
+                    <h3 style="font-size: 18px; margin-bottom: 8px; color: var(--charcoal);">${offer.title}</h3>
+                    <p style="color: var(--temple-stone); font-size: 14px;">${offer.description || 'No description'}</p>
+                    <div style="margin-top: 16px;">
+                        <label class="toggle">
+                            <input type="checkbox" ${offer.active ? 'checked' : ''} onchange="toggleActive(${offer.id})">
+                            <span class="toggle-slider"></span>
+                        </label>
+                        <span style="font-size: 13px; margin-left: 8px;">${offer.active ? 'Showing on website' : 'Hidden from website'}</span>
+                    </div>
+                </div>
+            `).join('');
+        }
+        
+        function toggleActive(id) {
+            const offer = offers.find(o => o.id === id);
+            if (offer) {
+                offer.active = !offer.active;
+                saveData('benneOffers', offers);
+                renderOffers();
+                showToast(`Offer ${offer.active ? 'activated' : 'deactivated'}`, 'success');
+            }
+        }
+        
+        function openModal(offer = null) {
+            const modal = document.getElementById('offerModal');
+            const title = document.getElementById('modalTitle');
+            const form = document.getElementById('offerForm');
+            
+            if (offer) {
+                title.textContent = 'Edit Offer';
+                document.getElementById('offerId').value = offer.id;
+                document.getElementById('offerTitle').value = offer.title;
+                document.getElementById('offerDescription').value = offer.description || '';
+                document.getElementById('offerBadge').value = offer.badge || '';
+                document.getElementById('offerActive').checked = offer.active;
+            } else {
+                title.textContent = 'Create Offer';
+                form.reset();
+                document.getElementById('offerId').value = '';
+            }
+            
+            modal.classList.add('active');
+        }
+        
+        function closeModal() {
+            document.getElementById('offerModal').classList.remove('active');
+        }
+        
+        function saveOffer() {
+            const id = document.getElementById('offerId').value;
+            const title = document.getElementById('offerTitle').value.trim();
+            const description = document.getElementById('offerDescription').value.trim();
+            const badge = document.getElementById('offerBadge').value;
+            const active = document.getElementById('offerActive').checked;
+            
+            if (!title) {
+                showToast('Please enter an offer title', 'error');
+                return;
+            }
+            
+            if (id) {
+                const index = offers.findIndex(o => o.id == id);
+                if (index !== -1) {
+                    offers[index] = { ...offers[index], title, description, badge, active };
+                    showToast('Offer updated successfully', 'success');
+                }
+            } else {
+                const newOffer = { id: Date.now(), title, description, badge, active };
+                offers.push(newOffer);
+                showToast('Offer created successfully', 'success');
+            }
+            
+            saveData('benneOffers', offers);
+            renderOffers();
+            closeModal();
+        }
+        
+        function editOffer(id) {
+            const offer = offers.find(o => o.id === id);
+            if (offer) openModal(offer);
+        }
+        
+        function deleteOffer(id) {
+            const offer = offers.find(o => o.id === id);
+            if (offer) {
+                deleteOfferId = id;
+                document.getElementById('deleteOfferName').textContent = offer.title;
+                document.getElementById('deleteModal').classList.add('active');
+            }
+        }
+        
+        function closeDeleteModal() {
+            document.getElementById('deleteModal').classList.remove('active');
+            deleteOfferId = null;
+        }
+        
+        function confirmDelete() {
+            if (deleteOfferId) {
+                offers = offers.filter(o => o.id !== deleteOfferId);
+                saveData('benneOffers', offers);
+                renderOffers();
+                showToast('Offer deleted', 'success');
+                closeDeleteModal();
+            }
+        }
+        
+        document.querySelectorAll('.modal-overlay').forEach(overlay => {
+            overlay.addEventListener('click', function(e) {
+                if (e.target === this) this.classList.remove('active');
+            });
+        });
+    </script>
+</body>
+</html>

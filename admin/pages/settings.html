@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Settings - Benne Admin</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/admin.css">
+    <link rel="icon" href="../../images/favicon.svg">
+</head>
+<body>
+    <div class="admin-wrapper">
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <a href="../dashboard.html" class="logo">
+                    <img src="../../images/Benne_logo-02.png" alt="Benne">
+                </a>
+            </div>
+            <nav class="sidebar-nav">
+                <a href="../dashboard.html" class="nav-item">
+                    <span class="icon">*</span>
+                    Dashboard
+                </a>
+                <a href="menu.html class="nav-item">
+                    <span class="icon">???</span>
+                    Menu Items
+                </a>
+                <a href="offers.html class="nav-item">
+                    <span class="icon">*</span>
+                    Offers
+                </a>
+                <a href="locations.html class="nav-item">
+                    <span class="icon">*</span>
+                    Locations
+                </a>
+                <a href="reviews.html class="nav-item">
+                    <span class="icon">*</span>
+                    Reviews
+                </a>
+                <a href="homepage.html class="nav-item">
+                    <span class="icon">*</span>
+                    Homepage
+                </a>
+                <a href="reservations.html class="nav-item">
+                    <span class="icon">*</span>
+                    Reservations
+                </a>
+                <a href="newsletter.html class="nav-item">
+                    <span class="icon">*</span>
+                    Newsletter
+                </a>
+                <a href="settings.html class="nav-item">
+                    <span class="icon">*</span>
+                    Settings
+                </a>
+            </nav>
+            <div class="sidebar-footer">
+                <a href="#" class="nav-item logout" onclick="logout(); return false;"><span class="icon">🚪</span> Logout</a>
+            </div>
+        </aside>
+        
+        <main class="main-content">
+            <header class="top-header">
+                <div class="header-title">
+                    <h1>Settings</h1>
+                    <p>Configure your restaurant settings</p>
+                </div>
+            </header>
+            
+            <div class="content">
+                <!-- General Settings -->
+                <div class="card" style="margin-bottom: 24px;">
+                    <div class="card-header">
+                        <h2>General Settings</h2>
+                    </div>
+                    <div class="card-body">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label>Restaurant Name</label>
+                                <input type="text" id="restaurantName" placeholder="Benne">
+                            </div>
+                            <div class="form-group">
+                                <label>Contact Email</label>
+                                <input type="email" id="contactEmail" placeholder="hello@benne.in">
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label>Contact Phone</label>
+                                <input type="text" id="contactPhone" placeholder="+91 8012 345 678">
+                            </div>
+                            <div class="form-group">
+                                <label>Currency Symbol</label>
+                                <select id="currency">
+                                    <option value="₹">₹ (Rupee)</option>
+                                    <option value="$">$ (Dollar)</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Social Links -->
+                <div class="card" style="margin-bottom: 24px;">
+                    <div class="card-header">
+                        <h2>Social Links</h2>
+                    </div>
+                    <div class="card-body">
+                        <div class="form-group">
+                            <label>Instagram URL</label>
+                            <input type="url" id="instagramUrl" placeholder="https://instagram.com/benne.bombay">
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Reservation Settings -->
+                <div class="card" style="margin-bottom: 24px;">
+                    <div class="card-header">
+                        <h2>Reservations</h2>
+                    </div>
+                    <div class="card-body">
+                        <div style="display: flex; justify-content: space-between; align-items: center;">
+                            <div>
+                                <h3 style="font-size: 15px; margin-bottom: 4px;">Enable Reservations</h3>
+                                <p style="font-size: 13px; color: var(--temple-stone);">Allow customers to book tables</p>
+                            </div>
+                            <label class="toggle">
+                                <input type="checkbox" id="reservationsEnabled">
+                                <span class="toggle-slider"></span>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- SEO Settings -->
+                <div class="card" style="margin-bottom: 24px;">
+                    <div class="card-header">
+                        <h2>SEO Settings</h2>
+                    </div>
+                    <div class="card-body">
+                        <div class="form-group">
+                            <label>Meta Title</label>
+                            <input type="text" id="metaTitle" placeholder="Benne - Filter Coffee & Dosas in Mumbai & Delhi">
+                        </div>
+                        <div class="form-group">
+                            <label>Meta Description</label>
+                            <textarea id="metaDescription" rows="3" placeholder="Authentic Bengaluru-style dosas and filter coffee in Mumbai & Delhi"></textarea>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Data Management -->
+                <div class="card" style="margin-bottom: 24px;">
+                    <div class="card-header">
+                        <h2>Data Management</h2>
+                    </div>
+                    <div class="card-body">
+                        <div style="display: flex; gap: 12px; flex-wrap: wrap;">
+                            <button class="btn btn-secondary" onclick="exportData('menu')">📤 Export Menu</button>
+                            <button class="btn btn-secondary" onclick="exportData('offers')">📤 Export Offers</button>
+                            <button class="btn btn-secondary" onclick="exportData('locations')">📤 Export Locations</button>
+                            <button class="btn btn-secondary" onclick="exportData('reviews')">📤 Export Reviews</button>
+                        </div>
+                        <hr style="margin: 20px 0; border: none; border-top: 1px solid #eee;">
+                        <div>
+                            <h3 style="font-size: 15px; margin-bottom: 8px; color: var(--error);">Danger Zone</h3>
+                            <button class="btn btn-danger" onclick="resetAllData()">🗑️ Reset All Data</button>
+                            <p style="font-size: 12px; color: var(--temple-stone); margin-top: 8px;">This will reset all data to default values.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Save Button -->
+                <div style="display: flex; justify-content: flex-end;">
+                    <button class="btn btn-primary" onclick="saveSettings()">💾 Save Settings</button>
+                </div>
+            </div>
+        </main>
+    </div>
+    
+    <!-- Delete Confirmation Modal -->
+    <div class="modal-overlay" id="resetModal">
+        <div class="modal" style="max-width: 400px;">
+            <div class="modal-header">
+                <h2>Reset All Data</h2>
+                <button class="modal-close" onclick="closeResetModal()">&times;</button>
+            </div>
+            <div class="modal-body">
+                <p style="color: var(--error); font-weight: 600;">⚠️ This will delete ALL your custom data!</p>
+                <p>Menu items, offers, locations, reviews, and settings will be reset to defaults.</p>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-secondary" onclick="closeResetModal()">Cancel</button>
+                <button class="btn btn-danger" onclick="confirmReset()">Yes, Reset Everything</button>
+            </div>
+        </div>
+    </div>
+    
+    <script src="../../js/auth.js"></script>
+    <script>
+        checkAuth();
+        
+        document.addEventListener('DOMContentLoaded', function() {
+            loadSettings();
+        });
+        
+        function loadSettings() {
+            const settings = getData('benneSettings', {});
+            
+            document.getElementById('restaurantName').value = settings.restaurantName || '';
+            document.getElementById('contactEmail').value = settings.email || '';
+            document.getElementById('contactPhone').value = settings.phone || '';
+            document.getElementById('currency').value = settings.currency || '₹';
+            document.getElementById('instagramUrl').value = settings.instagramUrl || '';
+            document.getElementById('reservationsEnabled').checked = settings.reservationsEnabled !== false;
+            document.getElementById('metaTitle').value = settings.metaTitle || '';
+            document.getElementById('metaDescription').value = settings.metaDescription || '';
+        }
+        
+        function saveSettings() {
+            const settings = {
+                restaurantName: document.getElementById('restaurantName').value,
+                email: document.getElementById('contactEmail').value,
+                phone: document.getElementById('contactPhone').value,
+                currency: document.getElementById('currency').value,
+                instagramUrl: document.getElementById('instagramUrl').value,
+                reservationsEnabled: document.getElementById('reservationsEnabled').checked,
+                metaTitle: document.getElementById('metaTitle').value,
+                metaDescription: document.getElementById('metaDescription').value
+            };
+            
+            saveData('benneSettings', settings);
+            showToast('Settings saved successfully!', 'success');
+        }
+        
+        function exportData(type) {
+            let data, filename;
+            
+            switch(type) {
+                case 'menu':
+                    data = getData('benneMenuItems', []);
+                    filename = 'benne-menu.json';
+                    break;
+                case 'offers':
+                    data = getData('benneOffers', []);
+                    filename = 'benne-offers.json';
+                    break;
+                case 'locations':
+                    data = getData('benneLocations', []);
+                    filename = 'benne-locations.json';
+                    break;
+                case 'reviews':
+                    data = getData('benneReviews', []);
+                    filename = 'benne-reviews.json';
+                    break;
+            }
+            
+            const blob = new Blob([JSON.stringify(data, null, 2)], { type: 'application/json' });
+            const url = URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = filename;
+            a.click();
+            URL.revokeObjectURL(url);
+            
+            showToast(`${type} data exported!`, 'success');
+        }
+        
+        function resetAllData() {
+            document.getElementById('resetModal').classList.add('active');
+        }
+        
+        function closeResetModal() {
+            document.getElementById('resetModal').classList.remove('active');
+        }
+        
+        function confirmReset() {
+            localStorage.removeItem('benneMenuItems');
+            localStorage.removeItem('benneOffers');
+            localStorage.removeItem('benneLocations');
+            localStorage.removeItem('benneReviews');
+            localStorage.removeItem('benneHomepage');
+            localStorage.removeItem('benneSettings');
+            
+            // Re-initialize defaults
+            initDefaultData();
+            
+            closeResetModal();
+            loadSettings();
+            showToast('All data has been reset to defaults', 'success');
+        }
+        
+        document.querySelectorAll('.modal-overlay').forEach(overlay => {
+            overlay.addEventListener('click', function(e) {
+                if (e.target === this) this.classList.remove('active');
+            });
+        });
+    </script>
+</body>
+</html>

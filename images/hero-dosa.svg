@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#4A3728"/>
+      <stop offset="50%" style="stop-color:#6F4E37"/>
+      <stop offset="100%" style="stop-color:#D4A84B"/>
+    </linearGradient>
+  </defs>
+  <!-- Background -->
+  <rect width="400" height="300" fill="url(#bg)"/>
+  <!-- Dosa -->
+  <ellipse cx="200" cy="180" rx="120" ry="30" fill="#D4A84B" opacity="0.9"/>
+  <ellipse cx="200" cy="170" rx="100" ry="20" fill="#E8C76B"/>
+  <!-- Butter blob -->
+  <ellipse cx="160" cy="165" rx="25" ry="8" fill="#FFD700" opacity="0.8"/>
+  <!-- Steam -->
+  <path d="M180 120 Q185 100 180 80" stroke="white" stroke-width="2" fill="none" opacity="0.5"/>
+  <path d="M200 110 Q210 90 200 70" stroke="white" stroke-width="2" fill="none" opacity="0.5"/>
+  <path d="M220 120 Q225 100 220 80" stroke="white" stroke-width="2" fill="none" opacity="0.5"/>
+  <!-- Text -->
+  <text x="200" y="260" text-anchor="middle" font-family="Georgia, serif" font-size="28" fill="#FAF7F2" font-weight="bold">BENNE</text>
+  <text x="200" y="285" text-anchor="middle" font-family="sans-serif" font-size="12" fill="#FAF7F2" opacity="0.8">Filter Coffee • Dosas • Bangalore Days</text>
+</svg>

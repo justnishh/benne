@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reviews - Benne Admin</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/admin.css">
+    <link rel="icon" href="../../images/favicon.svg">
+</head>
+<body>
+    <div class="admin-wrapper">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <a href="../dashboard.html" class="logo">
+                    <img src="../../images/Benne_logo-02.png" alt="Benne">
+                </a>
+            </div>
+            
+            <nav class="sidebar-nav">
+                <a href="../dashboard.html" class="nav-item">
+                    <span class="icon">*</span>
+                    Dashboard
+                </a>
+                <a href="menu.html class="nav-item">
+                    <span class="icon">???</span>
+                    Menu Items
+                </a>
+                <a href="offers.html class="nav-item">
+                    <span class="icon">*</span>
+                    Offers
+                </a>
+                <a href="locations.html class="nav-item">
+                    <span class="icon">*</span>
+                    Locations
+                </a>
+                <a href="reviews.html class="nav-item">
+                    <span class="icon">*</span>
+                    Reviews
+                </a>
+                <a href="homepage.html class="nav-item">
+                    <span class="icon">*</span>
+                    Homepage
+                </a>
+                <a href="reservations.html class="nav-item">
+                    <span class="icon">*</span>
+                    Reservations
+                </a>
+                <a href="newsletter.html class="nav-item">
+                    <span class="icon">*</span>
+                    Newsletter
+                </a>
+                <a href="settings.html class="nav-item">
+                    <span class="icon">*</span>
+                    Settings
+                </a>
+            </nav>
+            
+            <div class="sidebar-footer">
+                <a href="#" class="nav-item logout" onclick="logout(); return false;">
+                    <span class="icon">🚪</span>
+                    Logout
+                </a>
+            </div>
+        </aside>
+        
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Header -->
+            <header class="top-header">
+                <div class="header-title">
+                    <h1>Customer Reviews</h1>
+                    <p>Manage testimonials displayed on website</p>
+                </div>
+                <div class="header-actions">
+                    <button class="btn btn-primary" onclick="openModal()">
+                        ➕ Add Review
+                    </button>
+                </div>
+            </header>
+            
+            <!-- Content -->
+            <div class="content">
+                <!-- Auto-scroll Toggle -->
+                <div class="card" style="margin-bottom: 24px;">
+                    <div class="card-body" style="display: flex; justify-content: space-between; align-items: center;">
+                        <div>
+                            <h3 style="font-size: 16px; margin-bottom: 4px;">Auto-Scroll Reviews</h3>
+                            <p style="font-size: 14px; color: var(--temple-stone);">Automatically scroll through reviews on website</p>
+                        </div>
+                        <label class="toggle">
+                            <input type="checkbox" id="autoScrollToggle" onchange="toggleAutoScroll()">
+                            <span class="toggle-slider"></span>
+                        </label>
+                    </div>
+                </div>
+                
+                <!-- Reviews List -->
+                <div class="card">
+                    <div class="table-container">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Review</th>
+                                    <th>Author</th>
+                                    <th>Role</th>
+                                    <th>Rating</th>
+                                    <th>Status</th>
+                                    <th>Actions</th>
+                                </tr>
+                            </thead>
+                            <tbody id="reviewsTableBody">
+                            </tbody>
+                        </table>
+                    </div>
+                    
+                    <div class="empty-state" id="emptyState" style="display: none;">
+                        <div class="icon">⭐</div>
+                        <h3>No reviews yet</h3>
+                        <p>Add your first customer review.</p>
+                        <button class="btn btn-primary" onclick="openModal()">Add Review</button>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+    
+    <!-- Add/Edit Modal -->
+    <div class="modal-overlay" id="reviewModal">
+        <div class="modal">
+            <div class="modal-header">
+                <h2 id="modalTitle">Add Review</h2>
+                <button class="modal-close" onclick="closeModal()">&times;</button>
+            </div>
+            <div class="modal-body">
+                <form id="reviewForm">
+                    <input type="hidden" id="reviewId">
+                    
+                    <div class="form-group">
+                        <label for="reviewText">Review Quote *</label>
+                        <textarea id="reviewText" required placeholder="What did the customer say?" style="min-height: 100px;"></textarea>
+                    </div>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="reviewAuthor">Author Name *</label>
+                            <input type="text" id="reviewAuthor" required placeholder="e.g., Rahul S.">
+                        </div>
+                        <div class="form-group">
+                            <label for="reviewRole">Role/Occupation</label>
+                            <input type="text" id="reviewRole" placeholder="e.g., Software Engineer">
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>Star Rating</label>
+                        <div class="form-group">
+                        <label>Star Rating</label>
+                        <select id="reviewStars" style="padding: 10px; font-size: 16px;">
+                            <option value="5">????? (5 Stars)</option>
+                            <option value="4">????? (4 Stars)</option>
+                            <option value="3">????? (3 Stars)</option>
+                            <option value="2">????? (2 Stars)</option>
+                            <option value="1">????? (1 Star)</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>
+                            <input type="checkbox" id="reviewActive" checked style="width: auto; margin-right: 8px;">
+                            Display on website
+                        </label>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-secondary" onclick="closeModal()">Cancel</button>
+                <button class="btn btn-primary" onclick="saveReview()">Save Review</button>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Delete Modal -->
+    <div class="modal-overlay" id="deleteModal">
+        <div class="modal" style="max-width: 400px;">
+            <div class="modal-header">
+                <h2>Delete Review</h2>
+                <button class="modal-close" onclick="closeDeleteModal()">&times;</button>
+            </div>
+            <div class="modal-body">
+                <p>Are you sure you want to delete this review by <strong id="deleteReviewAuthor"></strong>?</p>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-secondary" onclick="closeDeleteModal()">Cancel</button>
+                <button class="btn btn-danger" onclick="confirmDelete()">Delete</button>
+            </div>
+        </div>
+    </div>
+    
+    <script src="../../js/auth.js"></script>
+    <script>
+        checkAuth();
+        
+        let reviews = [];
+        let deleteReviewId = null;
+        
+        document.addEventListener('DOMContentLoaded', function() {
+            loadReviews();
+            loadAutoScroll();
+        });
+        
+        function loadReviews() {
+            reviews = getData('benneReviews', []);
+            renderReviews();
+        }
+        
+        function loadAutoScroll() {
+            const settings = getData('benneSettings', {});
+            document.getElementById('autoScrollToggle').checked = settings.autoScrollReviews !== false;
+        }
+        
+        function toggleAutoScroll() {
+            const enabled = document.getElementById('autoScrollToggle').checked;
+            const settings = getData('benneSettings', {});
+            settings.autoScrollReviews = enabled;
+            saveData('benneSettings', settings);
+            showToast(`Auto-scroll ${enabled ? 'enabled' : 'disabled'}`, 'success');
+        }
+        
+        function renderReviews() {
+            const tbody = document.getElementById('reviewsTableBody');
+            const emptyState = document.getElementById('emptyState');
+            
+            if (reviews.length === 0) {
+                tbody.innerHTML = '';
+                emptyState.style.display = 'block';
+                return;
+            }
+            
+            emptyState.style.display = 'none';
+            tbody.innerHTML = reviews.map(review => `
+                <tr>
+                    <td style="max-width: 300px;">"${review.text.substring(0, 80)}${review.text.length > 80 ? '...' : ''}"</td>
+                    <td><strong>${review.author}</strong></td>
+                    <td>${review.role || '-'}</td>
+                    <td>${'★'.repeat(review.stars)}${'☆'.repeat(5-review.stars)}</td>
+                    <td>
+                        <span class="badge ${review.active ? 'badge-success' : 'badge-danger'}">
+                            ${review.active ? 'Active' : 'Hidden'}
+                        </span>
+                    </td>
+                    <td>
+                        <div class="table-actions">
+                            <button class="btn btn-secondary btn-sm" onclick="editReview(${review.id})">✏️</button>
+                            <button class="btn btn-danger btn-sm" onclick="deleteReview(${review.id})">🗑️</button>
+                        </div>
+                    </td>
+                </tr>
+            `).join('');
+        }
+        
+        </script>
+</body>
+</html>
