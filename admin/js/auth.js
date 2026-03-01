@@ -4,7 +4,7 @@
 function checkAuth() {
     const isLoggedIn = localStorage.getItem('benneAdminLoggedIn');
     if (!isLoggedIn) {
-        window.location.href = 'index.html';
+        window.location.href = 'login.html';
         return false;
     }
     return true;
@@ -15,7 +15,7 @@ function logout() {
     localStorage.removeItem('benneAdminLoggedIn');
     localStorage.removeItem('benneAdminEmail');
     localStorage.removeItem('benneAdminRemember');
-    window.location.href = 'index.html';
+    window.location.href = 'login.html';
 }
 
 // Show toast notification
