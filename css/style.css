@@ -391,3 +391,52 @@ img { max-width: 100%; display: block; }
   .footer-grid { grid-template-columns: 1fr; }
   .hero { min-height: auto; padding-top: 88px; padding-bottom: 40px; }
 }
+
+/* ===== Cookie Banner ===== */
+#cookieBanner {
+  position: fixed; bottom: 0; left: 0; right: 0; z-index: 9999;
+  background: var(--coffee); color: var(--cream);
+  padding: 24px 20px;
+  box-shadow: 0 -4px 24px rgba(0,0,0,0.2);
+  transition: transform 0.4s ease, opacity 0.4s ease;
+}
+#cookieBanner.cookie-hidden {
+  transform: translateY(100%); opacity: 0; pointer-events: none;
+}
+.cookie-inner {
+  max-width: 960px; margin: 0 auto;
+  display: flex; align-items: center; gap: 28px; flex-wrap: wrap;
+}
+.cookie-text { flex: 1; min-width: 280px; }
+.cookie-text strong {
+  display: block; font-family: 'Playfair Display', serif;
+  font-size: 1.05rem; margin-bottom: 6px; color: var(--cream);
+}
+.cookie-text p {
+  font-size: 0.85rem; line-height: 1.65;
+  color: rgba(246,231,193,0.7); margin: 0;
+}
+.cookie-buttons { display: flex; gap: 10px; flex-shrink: 0; flex-wrap: wrap; }
+.cookie-buttons .btn { font-size: 0.78rem; padding: 10px 22px; white-space: nowrap; }
+.cookie-buttons .btn-secondary {
+  border-color: rgba(246,231,193,0.3); color: var(--cream);
+}
+
+/* Cookie toast */
+#cookieToast {
+  position: fixed; bottom: 24px; left: 50%; transform: translateX(-50%) translateY(80px);
+  background: var(--coffee); color: var(--cream);
+  padding: 12px 28px; border-radius: var(--radius-sm);
+  font-family: 'Poppins', sans-serif; font-size: 0.85rem;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.2);
+  opacity: 0; transition: all 0.35s ease; z-index: 10000;
+  pointer-events: none; white-space: nowrap;
+}
+#cookieToast.cookie-toast-show {
+  opacity: 1; transform: translateX(-50%) translateY(0);
+}
+
+@media (max-width: 600px) {
+  .cookie-inner { flex-direction: column; text-align: center; }
+  .cookie-buttons { justify-content: center; width: 100%; }
+}
