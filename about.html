@@ -5,66 +5,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="icon" type="image/png" href="images/favicon.png">
   <title>Our Story — Benne</title>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
-  <style>
-    .story-section p { color: var(--coffee-light); line-height: 1.85; margin-bottom: 16px; }
-    .story-section strong { color: var(--coffee); }
-
-    .pull-quote {
-      border-left: 3px solid var(--terra);
-      padding: 20px 0 20px 28px;
-      margin: 48px 0;
-      font-family: 'Playfair Display', serif;
-      font-style: italic; font-size: 1.25rem;
-      color: var(--coffee); line-height: 1.65;
-    }
-    .pull-quote cite {
-      display: block; margin-top: 12px;
-      font-family: 'Poppins', sans-serif;
-      font-style: normal; font-size: 0.82rem;
-      color: var(--coffee-light); letter-spacing: 0.02em;
-    }
-
-    .detail-list { list-style: none; margin-top: 8px; }
-    .detail-list li {
-      padding: 16px 0;
-      border-bottom: 1px solid var(--border);
-    }
-    .detail-list li:last-child { border-bottom: none; }
-    .detail-list strong {
-      display: block; font-weight: 500; color: var(--coffee);
-      margin-bottom: 3px;
-    }
-    .detail-list span { font-size: 0.9rem; color: var(--coffee-light); }
-
-    .milestone-item { margin-bottom: 20px; }
-    .milestone-item .year {
-      font-family: 'Poppins', sans-serif;
-      font-size: 0.72rem; font-weight: 600;
-      letter-spacing: 0.08em; text-transform: uppercase;
-      color: var(--teal); margin-bottom: 3px;
-    }
-    .milestone-item p { font-size: 0.92rem; color: var(--coffee-light); }
-
-    .founder-card { margin-bottom: 28px; }
-    .founder-card h3 {
-      font-family: 'Playfair Display', serif;
-      font-size: 1.15rem; margin-bottom: 2px;
-    }
-    .founder-card .role {
-      font-size: 0.72rem; font-weight: 600;
-      letter-spacing: 0.06em; text-transform: uppercase;
-      color: var(--teal); margin-bottom: 8px; display: block;
-    }
-    .founder-card p { font-size: 0.9rem; color: var(--coffee-light); line-height: 1.7; }
-  </style>
 </head>
 <body>
 
   <nav class="navbar">
     <div class="container">
-      <a href="index.html"><img src="images/logo.png" alt="Benne" style="height: 38px;" loading="lazy"></a>
+      <a href="index.html"><img src="images/logo.webp" alt="Benne" style="height: 38px;" loading="lazy"></a>
       <ul class="nav-links">
         <li><a href="index.html">Home</a></li>
         <li><a href="menu.html">Menu</a></li>
@@ -87,7 +35,7 @@
     <div class="container">
       <div class="grid-2" style="gap: 56px; align-items: start;">
         <div>
-          <img src="images/founders.jpeg" alt="Benne" style="width: 100%; border-radius: var(--radius);" loading="lazy">
+          <img src="images/founders.webp" alt="Benne" style="width: 100%; border-radius: var(--radius);" loading="lazy">
         </div>
         <div>
           <h2 style="margin-bottom: 20px; font-size: clamp(1.6rem, 3vw, 2rem);">Born from nostalgia,<br>built with love</h2>
@@ -144,11 +92,13 @@
       </div>
       <div class="grid-2" style="max-width: 800px;">
         <div class="founder-card fade-in">
+          <img src="images/akhil-iyer.jpg" alt="Akhil Iyer" loading="lazy" style="width: 100%; aspect-ratio: 1; object-fit: cover; object-position: top; border-radius: var(--radius); margin-bottom: 16px;">
           <h3>Akhil Iyer</h3>
           <span class="role">Co-Founder · Actor-Producer</span>
           <p>Bengaluru native who spent 11 years in Mumbai missing darshini dosas. Trained on Avenue Road to master the craft. Turned homesickness into a restaurant.</p>
         </div>
         <div class="founder-card fade-in">
+          <img src="images/shriya-narayan.jpg" alt="Shriya Narayan" loading="lazy" style="width: 100%; aspect-ratio: 1; object-fit: cover; object-position: top; border-radius: var(--radius); margin-bottom: 16px;">
           <h3>Shriya Narayan</h3>
           <span class="role">Co-Founder · Psychologist</span>
           <p>Believes food is comfort, connection, and home. Brought the heart, the soul, and the business sense to every decision at Benne.</p>
@@ -189,6 +139,6 @@
     </div>
   </footer>
 
-  <script src="js/main.js"></script>
+  <script src="js/main.js" defer></script>
 </body>
 </html>

@@ -84,6 +84,16 @@ function loadCookieEmbeds() {
   });
 }
 
+// Menu tabs
+document.querySelectorAll('.menu-tab').forEach(tab => {
+  tab.addEventListener('click', () => {
+    document.querySelectorAll('.menu-tab').forEach(t => t.classList.remove('active'));
+    document.querySelectorAll('.menu-category').forEach(c => c.classList.remove('active'));
+    tab.classList.add('active');
+    document.getElementById(tab.dataset.tab).classList.add('active');
+  });
+});
+
 // Contact form
 const form = document.getElementById('contactForm');
 if (form) {
