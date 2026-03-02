@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 150">
+  <defs>
+    <linearGradient id="logoGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#4A3728"/>
+      <stop offset="50%" style="stop-color:#6F4E37"/>
+      <stop offset="100%" style="stop-color:#4A3728"/>
+    </linearGradient>
+  </defs>
+  
+  <!-- Background (optional - remove for transparent) -->
+  <rect width="400" height="150" fill="#FAF7F2" rx="12"/>
+  
+  <!-- Main Text: BENNE -->
+  <text x="200" y="95" 
+        font-family="Georgia, serif" 
+        font-size="72" 
+        font-weight="bold" 
+        fill="url(#logoGradient)" 
+        text-anchor="middle"
+        letter-spacing="12">BENNE</text>
+  
+  <!-- Tagline -->
+  <text x="200" y="125" 
+        font-family="DM Sans, sans-serif" 
+        font-size="14" 
+        fill="#8B7D6B" 
+        text-anchor="middle"
+        letter-spacing="3">FILTER COFFEE • DOSAS</text>
+</svg>
