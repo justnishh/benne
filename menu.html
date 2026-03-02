@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" href="images/favicon.png">
+  <title>Menu — Benne</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <nav class="navbar">
+    <div class="container">
+      <a href="index.html"><img src="images/logo.png" alt="Benne" style="height: 38px;"></a>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="menu.html">Menu</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <button class="hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
+    </div>
+  </nav>
+
+  <section class="page-header">
+    <div class="container">
+      <h1>The Menu</h1>
+      <p>100% vegetarian · Heritage Bangalore recipes · Avg. ₹200–400 per person</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+
+      <div class="menu-tabs">
+        <button class="menu-tab active" data-tab="dosa">Dosa</button>
+        <button class="menu-tab" data-tab="idli">Idli & Vada</button>
+        <button class="menu-tab" data-tab="specials">Specials</button>
+        <button class="menu-tab" data-tab="rice">Rice & Tiffin</button>
+        <button class="menu-tab" data-tab="beverages">Drinks</button>
+        <button class="menu-tab" data-tab="combos">Combos</button>
+      </div>
+
+      <div class="menu-category active" id="dosa">
+        <div class="menu-grid">
+          <div class="menu-item"><div class="menu-item-info"><h3>Classic Benne Dosa</h3><p class="desc">Crispy Davangere-style, white butter</p></div><span class="price">₹120</span></div>
+          <div class="menu-item"><div class="menu-item-info"><h3>Benne Masala Dosa</h3><p class="desc">Butter dosa, spiced potato filling</p></div><span class="price">₹140</span></div>
+          <div class="menu-item"><div class="menu-item-info"><h3>Podi Plain Dosa</h3><p class="desc">Gunpowder podi dusted</p></div><span class="price">₹130</span></div>
+          <div class="menu-item"><div class="menu-item-info"><h3>Podi Masala Dosa</h3><p class="desc">Podi + masala potato filling</p></div><span class="price">₹140</span></div>
+          <div class="menu-item"><div class="menu-item-info"><h3>Garlic Roast Dosa</h3><p class="desc">Crispy roast, garlic, butter</p></div><span class="price">₹150</span></div>
+          <div class="menu-item"><div class="menu-item-info"><h3>Cheese Benne Dosa</h3><p class="desc">Melted cheese loaded</p></div><span class="price">₹160</span></div>
+          <div class="menu-item"><div class="menu-item-info"><h3>Onion Benne Dosa</h3><p class="desc">Crispy onion topping</p></div><span class="price">₹130</span></div>
+          <div class="menu-item"><div class="menu-item-info"><h3>Ghee Roast Dosa</h3><p class="desc">Golden ghee-roasted</p></div><span class="price">₹150</span></div>
+          <div class="menu-item"><div class="menu-item-info"><h3>Mysore Masala Dosa</h3><p class="desc">Red chutney, potato masala</p></div><span class="price">₹135</span></div>
+          <div class="menu-item"><div class="menu-item-info"><h3>Rava Dosa</h3><p class="desc">Crispy semolina crepe</p></div><span class="price">₹115</span></div>
+          <div class="menu-item"><div class="menu-item-info"><h3>Paper Dosa</h3><p class="desc">Ultra-thin, extra crispy</p></div><span class="price">₹110</span></div>
+          <div class="menu-item"><div class="menu-item-info"><h3>Set Dosa (2 pcs)</h3><p class="desc">Soft, spongy</p></div><span class="price">₹100</span></div>
+        </div>
+      </div>
+
+      <div class="menu-category" id="idli">
+        <div class="menu-grid">
+          <div class="menu-item"><div class="menu-item-info"><h3>Idli (3 pcs)</h3><p class="desc">Steamed, sambar & chutney</p></div><span class="price">₹80</span></div>
+          <div class="menu-item"><div class="menu-item-info"><h3>Medu Vada (2 pcs)</h3><p class="desc">Crispy urad dal fritters</p></div><span class="price">₹85</span></div>
+          <div class="menu-item"><div class="menu-item-info"><h3>Idli Vada Combo</h3><p class="desc">One of each</p></div><span class="price">₹95</span></div>
+          <div class="menu-item"><div class="menu-item-info"><h3>Sambar Vada</h3><p class="desc">Vada dunked in sambar</p></div><span class="price">₹90</span></div>
+          <div class="menu-item"><div class="menu-item-info"><h3>Ghee Idli</h3><p class="desc">Drizzled with fragrant ghee</p></div><span class="price">₹90</span></div>
+          <div class="menu-item"><div class="menu-item-info"><h3>Ghee Podi Idli</h3><p class="desc">Ghee + gunpowder podi</p></div><span class="price">₹100</span></div>
+          <div class="menu-item"><div class="menu-item-info"><h3>Thatte Idli</h3><p class="desc">Large, flat Karnataka-style</p></div><span class="price">₹90</span></div>
+          <div class="menu-item"><div class="menu-item-info"><h3>Ghee Podi Thatte Idli</h3><p class="desc">The ultimate thatte idli</p></div><span class="price">₹110</span></div>
+        </div>
+      </div>
+
+      <div class="menu-category" id="specials">
+        <div class="menu-grid">
+          <div class="menu-item"><div class="menu-item-info"><h3>Akki Roti</h3><p class="desc">Rice flour roti, herbs</p></div><span class="price">₹95</span></div>
+          <div class="menu-item"><div class="menu-item-info"><h3>Ragi Roti</h3><p class="desc">Finger millet flatbread</p></div><span class="price">₹95</span></div>
+          <div class="menu-item"><div class="menu-item-info"><h3>Mangalore Buns</h3><p class="desc">Banana-flavoured, deep-fried</p></div><span class="price">₹85</span></div>
+          <div class="menu-item"><div class="menu-item-info"><h3>Uttapam</h3><p class="desc">Thick rice pancake</p></div><span class="price">₹95</span></div>
+          <div class="menu-item"><div class="menu-item-info"><h3>Onion Uttapam</h3><p class="desc">Crispy onion topping</p></div><span class="price">₹105</span></div>
+          <div class="menu-item"><div class="menu-item-info"><h3>Pesarattu</h3><p class="desc">Green gram dosa</p></div><span class="price">₹115</span></div>
+          <div class="menu-item"><div class="menu-item-info"><h3>Mysore Pak</h3><p class="desc">Gram flour & ghee sweet</p></div><span class="price">₹60</span></div>
+          <div class="menu-item"><div class="menu-item-info"><h3>Badam Halwa</h3><p class="desc">Warm almond halwa</p></div><span class="price">₹70</span></div>
+          <div class="menu-item"><div class="menu-item-info"><h3>Kesari Bath</h3><p class="desc">Saffron semolina pudding</p></div><span class="price">₹60</span></div>
+        </div>
+      </div>
+
+      <div class="menu-category" id="rice">
+        <div class="menu-grid">
+          <div class="menu-item"><div class="menu-item-info"><h3>Bisi Bele Bath</h3><p class="desc">Spicy rice & lentil</p></div><span class="price">₹125</span></div>
+          <div class="menu-item"><div class="menu-item-info"><h3>Sambar Rice</h3><p class="desc">Rice with aromatic sambar</p></div><span class="price">₹110</span></div>
+          <div class="menu-item"><div class="menu-item-info"><h3>Curd Rice</h3><p class="desc">Yogurt rice, comfort classic</p></div><span class="price">₹90</span></div>
+          <div class="menu-item"><div class="menu-item-info"><h3>Lemon Rice</h3><p class="desc">Tangy, tempered</p></div><span class="price">₹95</span></div>
+          <div class="menu-item"><div class="menu-item-info"><h3>Puliyogare</h3><p class="desc">Tamarind rice</p></div><span class="price">₹100</span></div>
+          <div class="menu-item"><div class="menu-item-info"><h3>Vangibath</h3><p class="desc">Spiced brinjal rice</p></div><span class="price">₹115</span></div>
+          <div class="menu-item"><div class="menu-item-info"><h3>Pongal</h3><p class="desc">Rice, dal, pepper, ghee</p></div><span class="price">₹85</span></div>
+          <div class="menu-item"><div class="menu-item-info"><h3>Upma</h3><p class="desc">Semolina, cashews</p></div><span class="price">₹75</span></div>
+          <div class="menu-item"><div class="menu-item-info"><h3>Poha</h3><p class="desc">Flattened rice, peanuts</p></div><span class="price">₹70</span></div>
+        </div>
+      </div>
+
+      <div class="menu-category" id="beverages">
+        <div class="menu-grid">
+          <div class="menu-item"><div class="menu-item-info"><h3>Filter Coffee</h3><p class="desc">Strong, aromatic, frothy</p></div><span class="price">₹40</span></div>
+          <div class="menu-item"><div class="menu-item-info"><h3>Iced Filter Coffee</h3><p class="desc">Chilled filter coffee</p></div><span class="price">₹50</span></div>
+          <div class="menu-item"><div class="menu-item-info"><h3>Vegan Filter Coffee</h3><p class="desc">Plant-based milk</p></div><span class="price">₹50</span></div>
+          <div class="menu-item"><div class="menu-item-info"><h3>Iced Vegan Coffee</h3><p class="desc">Chilled, vegan-friendly</p></div><span class="price">₹60</span></div>
+          <div class="menu-item"><div class="menu-item-info"><h3>Masala Chai</h3><p class="desc">Spiced Indian tea</p></div><span class="price">₹30</span></div>
+          <div class="menu-item"><div class="menu-item-info"><h3>Badam Milk</h3><p class="desc">Almond-saffron</p></div><span class="price">₹60</span></div>
+          <div class="menu-item"><div class="menu-item-info"><h3>Buttermilk</h3><p class="desc">Spiced chaas</p></div><span class="price">₹35</span></div>
+          <div class="menu-item"><div class="menu-item-info"><h3>Horlicks / Iced</h3><p class="desc">Hot or cold</p></div><span class="price">₹45 / ₹55</span></div>
+          <div class="menu-item"><div class="menu-item-info"><h3>Bournvita / Iced</h3><p class="desc">Hot or cold</p></div><span class="price">₹45 / ₹55</span></div>
+          <div class="menu-item"><div class="menu-item-info"><h3>Mango Lassi</h3><p class="desc">Thick, creamy</p></div><span class="price">₹70</span></div>
+          <div class="menu-item"><div class="menu-item-info"><h3>Fresh Lime Soda</h3><p class="desc">Sweet or salted</p></div><span class="price">₹40</span></div>
+        </div>
+      </div>
+
+      <div class="menu-category" id="combos">
+        <div class="menu-grid">
+          <div class="menu-item"><div class="menu-item-info"><h3>Breakfast Combo 1</h3><p class="desc">Idli + Vada + Filter Coffee</p></div><span class="price">₹130</span></div>
+          <div class="menu-item"><div class="menu-item-info"><h3>Breakfast Combo 2</h3><p class="desc">Dosa + Vada + Filter Coffee</p></div><span class="price">₹150</span></div>
+          <div class="menu-item"><div class="menu-item-info"><h3>Mini Meal</h3><p class="desc">Rice, Sambar, Rasam, Curd, Papad</p></div><span class="price">₹160</span></div>
+          <div class="menu-item"><div class="menu-item-info"><h3>Full South Indian Meal</h3><p class="desc">Complete thali</p></div><span class="price">₹250</span></div>
+          <div class="menu-item"><div class="menu-item-info"><h3>Family Pack</h3><p class="desc">Assorted, feeds 3–4</p></div><span class="price">₹500</span></div>
+        </div>
+      </div>
+
+      <p style="color: var(--coffee-light); font-size: 0.82rem; margin-top: 36px; padding-top: 20px; border-top: 1px solid var(--border);">
+        All items served with sambar, kempur chutney & coconut-coriander chutney. Add-ons: Extra Sambar ₹20 · Chutney ₹15 · Potato Masala ₹30
+      </p>
+
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section style="background: var(--coffee); padding: 72px 0;" class="text-center">
+    <div class="container">
+      <h2 style="color: var(--cream); margin-bottom: 12px;">Come visit</h2>
+      <p style="color: rgba(246,231,193,0.6); margin-bottom: 24px;">Bandra West & Juhu, Mumbai</p>
+      <a href="contact.html" class="btn btn-primary">Get Directions</a>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div><h4>Benne</h4><p>Heritage Bangalore Dosa in Mumbai.</p></div>
+        <div><h4>Navigate</h4><ul><li><a href="index.html">Home</a></li><li><a href="menu.html">Menu</a></li><li><a href="about.html">Our Story</a></li><li><a href="contact.html">Visit Us</a></li></ul></div>
+        <div><h4>Hours</h4><ul><li>Mon: Closed</li><li>Tue–Sat: 7AM–3:30PM & 5–11:30PM</li><li>Sun: 7AM–4PM & 5–11:30PM</li></ul></div>
+        <div><h4>Get in Touch</h4><ul><li><a href="mailto:hello@shimowfoods.com">hello@shimowfoods.com</a></li><li><a href="https://wa.me/919004988941" target="_blank" rel="noopener">+91 90049 88941</a></li></ul></div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 Benne · Shimow Hospitality Pvt. Ltd.</p>
+        <div class="footer-socials">
+          <a href="https://instagram.com/benne.bombay" target="_blank" rel="noopener">Instagram</a>
+          <a href="https://www.zomato.com/mumbai/benne-pali-hill-bandra-west" target="_blank" rel="noopener">Zomato</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script>
+    document.querySelectorAll('.menu-tab').forEach(tab => {
+      tab.addEventListener('click', () => {
+        document.querySelectorAll('.menu-tab').forEach(t => t.classList.remove('active'));
+        document.querySelectorAll('.menu-category').forEach(c => c.classList.remove('active'));
+        tab.classList.add('active');
+        document.getElementById(tab.dataset.tab).classList.add('active');
+      });
+    });
+  </script>
+</body>
+</html>

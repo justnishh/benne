@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" href="images/favicon.png">
+  <title>Our Story — Benne</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    .story-section p { color: var(--coffee-light); line-height: 1.85; margin-bottom: 16px; }
+    .story-section strong { color: var(--coffee); }
+
+    .pull-quote {
+      border-left: 3px solid var(--terra);
+      padding: 20px 0 20px 28px;
+      margin: 48px 0;
+      font-family: 'Playfair Display', serif;
+      font-style: italic; font-size: 1.25rem;
+      color: var(--coffee); line-height: 1.65;
+    }
+    .pull-quote cite {
+      display: block; margin-top: 12px;
+      font-family: 'Poppins', sans-serif;
+      font-style: normal; font-size: 0.82rem;
+      color: var(--coffee-light); letter-spacing: 0.02em;
+    }
+
+    .detail-list { list-style: none; margin-top: 8px; }
+    .detail-list li {
+      padding: 16px 0;
+      border-bottom: 1px solid var(--border);
+    }
+    .detail-list li:last-child { border-bottom: none; }
+    .detail-list strong {
+      display: block; font-weight: 500; color: var(--coffee);
+      margin-bottom: 3px;
+    }
+    .detail-list span { font-size: 0.9rem; color: var(--coffee-light); }
+
+    .milestone-item { margin-bottom: 20px; }
+    .milestone-item .year {
+      font-family: 'Poppins', sans-serif;
+      font-size: 0.72rem; font-weight: 600;
+      letter-spacing: 0.08em; text-transform: uppercase;
+      color: var(--teal); margin-bottom: 3px;
+    }
+    .milestone-item p { font-size: 0.92rem; color: var(--coffee-light); }
+
+    .founder-card { margin-bottom: 28px; }
+    .founder-card h3 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.15rem; margin-bottom: 2px;
+    }
+    .founder-card .role {
+      font-size: 0.72rem; font-weight: 600;
+      letter-spacing: 0.06em; text-transform: uppercase;
+      color: var(--teal); margin-bottom: 8px; display: block;
+    }
+    .founder-card p { font-size: 0.9rem; color: var(--coffee-light); line-height: 1.7; }
+  </style>
+</head>
+<body>
+
+  <nav class="navbar">
+    <div class="container">
+      <a href="index.html"><img src="images/logo.png" alt="Benne" style="height: 38px;"></a>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="menu.html">Menu</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <button class="hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
+    </div>
+  </nav>
+
+  <section class="page-header">
+    <div class="container">
+      <h1>Our Story</h1>
+      <p>From Bangalore nostalgia to Mumbai's most-loved dosa spot</p>
+    </div>
+  </section>
+
+  <!-- The Story -->
+  <section class="section story-section">
+    <div class="container">
+      <div class="grid-2" style="gap: 56px; align-items: start;">
+        <div>
+          <img src="images/founders.jpeg" alt="Benne" style="width: 100%; border-radius: var(--radius);">
+        </div>
+        <div>
+          <h2 style="margin-bottom: 20px; font-size: clamp(1.6rem, 3vw, 2rem);">Born from nostalgia,<br>built with love</h2>
+          <p><strong>Akhil Iyer</strong> is an actor-producer from Bengaluru. Every time he flew back home, his first stop was a humble darshini on Avenue Road for a benne dosa. After 11 years in Mumbai, he couldn't find anything that came close.</p>
+          <p>He tried convincing Bangalore restaurateurs to open in Mumbai. Nobody was interested. So he and <strong>Shriya Narayan</strong> — a psychologist and his partner — decided to do it themselves. Zero F&B experience.</p>
+          <p>Akhil trained under a dosa master on Avenue Road. Batter consistency, timing, the whole craft. Months of testing in their kitchen followed.</p>
+          <p>In <strong>May 2024</strong>, they opened a 275-square-foot space in Bandra. Standing tables, no chairs, self-service — a real darshini. Queues formed from day one.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Quote -->
+  <section class="section-alt" style="padding: 64px 0;">
+    <div class="container" style="max-width: 720px;">
+      <div class="pull-quote">
+        "Great dosas depend on honor, respect, and care invested in its making."
+        <cite>— Akhil Iyer & Shriya Narayan, Founders</cite>
+      </div>
+    </div>
+  </section>
+
+  <!-- Darshini + Journey -->
+  <section class="section">
+    <div class="container">
+      <div class="grid-2" style="gap: 56px; align-items: start;">
+        <div>
+          <h2 style="margin-bottom: 20px; font-size: clamp(1.4rem, 2.5vw, 1.8rem);">The darshini format</h2>
+          <p style="color: var(--coffee-light); margin-bottom: 20px;">We didn't just bring the dosa. We brought the entire culture.</p>
+          <ul class="detail-list">
+            <li><strong>Standing tables only</strong><span>No chairs. Stand, eat, leave — the darshini way.</span></li>
+            <li><strong>Quirky nicknames</strong><span>You're called "Sultanpalya Shakir" or "Koramangala Karthik" — not a number.</span></li>
+            <li><strong>Quick self-service</strong><span>Made to order. Served in minutes. No fuss.</span></li>
+            <li><strong>275 square feet</strong><span>One tiny space. One legendary dosa.</span></li>
+            <li><strong>100% vegetarian</strong><span>Pure veg, like every darshini in Bangalore.</span></li>
+          </ul>
+        </div>
+        <div>
+          <h2 style="margin-bottom: 20px; font-size: clamp(1.4rem, 2.5vw, 1.8rem);">The journey</h2>
+          <div class="milestone-item"><p class="year">Early 2024</p><p>Akhil trains on Bengaluru's Avenue Road under a dosa master.</p></div>
+          <div class="milestone-item"><p class="year">May 2024</p><p>Benne opens in Bandra West. 275 sq ft, standing tables, instant queues.</p></div>
+          <div class="milestone-item"><p class="year">Mid 2024</p><p>Deepika Padukone, Ranveer Singh, Anushka Sharma, Virat Kohli visit. Media coverage explodes.</p></div>
+          <div class="milestone-item"><p class="year">March 2025</p><p>Second location opens on Gulmohar Road, Juhu.</p></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Founders -->
+  <section class="section section-alt">
+    <div class="container">
+      <div class="section-header">
+        <h2>The founders</h2>
+      </div>
+      <div class="grid-2" style="max-width: 800px;">
+        <div class="founder-card fade-in">
+          <h3>Akhil Iyer</h3>
+          <span class="role">Co-Founder · Actor-Producer</span>
+          <p>Bengaluru native who spent 11 years in Mumbai missing darshini dosas. Trained on Avenue Road to master the craft. Turned homesickness into a restaurant.</p>
+        </div>
+        <div class="founder-card fade-in">
+          <h3>Shriya Narayan</h3>
+          <span class="role">Co-Founder · Psychologist</span>
+          <p>Believes food is comfort, connection, and home. Brought the heart, the soul, and the business sense to every decision at Benne.</p>
+        </div>
+      </div>
+
+      <p style="color: var(--coffee-light); font-size: 0.9rem; margin-top: 40px;">
+        <strong style="color: var(--coffee);">Also visited by:</strong> Dia Mirza, Masaba Gupta, and thousands of dosa lovers across Mumbai.
+      </p>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section style="background: var(--coffee); padding: 72px 0;" class="text-center">
+    <div class="container">
+      <h2 style="color: var(--cream); margin-bottom: 12px;">Ready to taste it?</h2>
+      <p style="color: rgba(246,231,193,0.6); margin-bottom: 24px;">Browse the menu or come visit us in person.</p>
+      <a href="menu.html" class="btn btn-primary" style="margin-right: 12px;">View Menu</a>
+      <a href="contact.html" class="btn btn-secondary" style="border-color: rgba(246,231,193,0.3); color: var(--cream);">Get Directions</a>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div><h4>Benne</h4><p>Heritage Bangalore Dosa in Mumbai since May 2024.</p></div>
+        <div><h4>Navigate</h4><ul><li><a href="index.html">Home</a></li><li><a href="menu.html">Menu</a></li><li><a href="about.html">Our Story</a></li><li><a href="contact.html">Visit Us</a></li></ul></div>
+        <div><h4>Hours</h4><ul><li>Mon: Closed</li><li>Tue–Sat: 7AM–3:30PM & 5–11:30PM</li><li>Sun: 7AM–4PM & 5–11:30PM</li></ul></div>
+        <div><h4>Get in Touch</h4><ul><li><a href="mailto:hello@shimowfoods.com">hello@shimowfoods.com</a></li><li><a href="https://wa.me/919004988941" target="_blank" rel="noopener">+91 90049 88941</a></li></ul></div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 Benne · Shimow Hospitality Pvt. Ltd.</p>
+        <div class="footer-socials">
+          <a href="https://instagram.com/benne.bombay" target="_blank" rel="noopener">Instagram</a>
+          <a href="https://www.zomato.com/mumbai/benne-pali-hill-bandra-west" target="_blank" rel="noopener">Zomato</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
