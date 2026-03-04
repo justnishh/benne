@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Media Library — Benne Admin</title>
+  <title>Messages — Benne Admin</title>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/css/admin.css">
   <link rel="icon" type="image/png" href="/images/favicon.png">
@@ -11,7 +11,10 @@
 <body>
   <div class="admin-layout">
     <nav class="sidebar">
-      <div class="sidebar-logo"><h2>Benne</h2><span>Admin Panel</span></div>
+      <div class="sidebar-logo">
+        <h2>Benne</h2>
+        <span>Admin Panel</span>
+      </div>
       <ul class="sidebar-nav">
         <li><a href="/admin/dashboard">Dashboard</a></li>
         <div class="divider"></div>
@@ -19,37 +22,48 @@
         <li><a href="/admin/menu">Menu</a></li>
         <li><a href="/admin/about">About Page</a></li>
         <li><a href="/admin/contact">Contact Page</a></li>
-        <li><a href="/admin/messages">Messages</a></li>
+        <li><a href="/admin/messages" class="active">Messages</a></li>
         <li><a href="/admin/faq">FAQs</a></li>
         <li><a href="/admin/privacy">Privacy Policy</a></li>
         <li><a href="/admin/terms">Terms</a></li>
         <div class="divider"></div>
         <li><a href="/admin/settings">Settings</a></li>
-        <li><a href="/admin/media" class="active">Media Library</a></li>
+        <li><a href="/admin/media">Media Library</a></li>
         <div class="divider"></div>
         <li><a href="#" onclick="logout()">Logout</a></li>
       </ul>
     </nav>
     <main class="main-content">
-      <h1 class="page-title">Media Library</h1>
-      <p class="page-subtitle">Upload, browse, and manage images. Use file paths in page editors.</p>
+      <h1 class="page-title">Messages</h1>
+      <p class="page-subtitle">Customer inquiries from the contact form.</p>
 
-      <div class="admin-card">
-        <h3>Upload Image</h3>
-        <div id="uploadArea" class="upload-area">
-          <p>Click or drag an image here to upload</p>
-          <p style="font-size:0.75rem;color:var(--coffee-light);margin-top:4px">Max 5MB · JPG, PNG, WebP, GIF, SVG</p>
+      <div class="stats-grid" id="messageStats">
+        <div class="stat-card">
+          <div class="number" id="statTotal">-</div>
+          <div class="label">Total Messages</div>
         </div>
-        <input type="file" id="fileInput" accept="image/*" style="display:none">
+        <div class="stat-card">
+          <div class="number" id="statUnread">-</div>
+          <div class="label">Unread</div>
+        </div>
       </div>
 
       <div class="admin-card">
-        <h3>All Images</h3>
-        <div id="mediaGrid" class="media-grid"></div>
+        <div class="message-filters" id="messageFilters">
+          <button class="admin-tab active" data-filter="all">All</button>
+          <button class="admin-tab" data-filter="unread">Unread</button>
+          <button class="admin-tab" data-filter="read">Read</button>
+        </div>
+        <div id="messagesContainer"></div>
       </div>
     </main>
   </div>
+
+  <div class="modal-overlay" id="modalOverlay" onclick="if(event.target===this)closeModal()">
+    <div class="modal" id="modalContent"></div>
+  </div>
+
   <script src="/js/admin.js"></script>
-  <script>initMediaLibrary();</script>
+  <script>initMessages();</script>
 </body>
 </html>

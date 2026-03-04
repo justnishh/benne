@@ -103,6 +103,10 @@ async function initDashboard() {
     if (media && el('statImages')) {
       el('statImages').textContent = (media.originals || []).length + (media.uploads || []).length;
     }
+    const msgs = await apiFetch(API + '/messages');
+    if (msgs && el('statUnreadMessages')) {
+      el('statUnreadMessages').textContent = msgs.unreadCount || 0;
+    }
   } catch {}
 }
 
@@ -970,6 +974,190 @@ async function logout() {
   localStorage.removeItem('admin_token');
   window.location.href = '/admin/login';
 }
+
+// ===== Messages =====
+let _messagesData = [];
+let _currentFilter = 'all';
+
+async function initMessages() {
+  if (!await checkAuth()) return;
+  await loadMessages();
+
+  document.querySelectorAll('#messageFilters .admin-tab').forEach(tab => {
+    tab.addEventListener('click', () => {
+      document.querySelectorAll('#messageFilters .admin-tab').forEach(t => t.classList.remove('active'));
+      tab.classList.add('active');
+      _currentFilter = tab.dataset.filter;
+      renderMessages();
+    });
+  });
+}
+
+async function loadMessages() {
+  const data = await apiFetch(API + '/messages');
+  if (!data) return;
+  _messagesData = data.messages || [];
+  const el = (id) => document.getElementById(id);
+  if (el('statTotal')) el('statTotal').textContent = _messagesData.length;
+  if (el('statUnread')) el('statUnread').textContent = data.unreadCount || 0;
+  renderMessages();
+}
+
+function renderMessages() {
+  const container = document.getElementById('messagesContainer');
+  if (!container) return;
+
+  let filtered = _messagesData;
+  if (_currentFilter === 'unread') filtered = _messagesData.filter(m => !m.read);
+  else if (_currentFilter === 'read') filtered = _messagesData.filter(m => m.read);
+
+  // Sort newest first
+  filtered.sort((a, b) => new Date(b.createdAt) - new Date(a.createdAt));
+
+  if (filtered.length === 0) {
+    container.innerHTML = '<div class="empty-state"><h3>No messages</h3><p>Messages from the contact form will appear here.</p></div>';
+    return;
+  }
+
+  let html = `<table class="admin-table">
+    <thead><tr><th>Status</th><th>Name</th><th>Email</th><th>Subject</th><th>Date</th><th>Actions</th></tr></thead>
+    <tbody>`;
+  filtered.forEach(m => {
+    const date = new Date(m.createdAt).toLocaleDateString('en-IN', { day: 'numeric', month: 'short', year: 'numeric' });
+    html += `<tr class="message-row${m.read ? '' : ' unread'}" onclick="viewMessage('${m.id}')">
+      <td><span class="status-dot${m.read ? '' : ' unread'}"></span></td>
+      <td>${esc(m.name)}</td>
+      <td>${esc(m.email)}</td>
+      <td>${esc(m.subject)}</td>
+      <td>${date}</td>
+      <td class="actions" onclick="event.stopPropagation()">
+        <button class="btn btn-sm btn-secondary" onclick="toggleRead('${m.id}', ${m.read})">${m.read ? 'Unread' : 'Read'}</button>
+        <button class="btn btn-sm btn-danger" onclick="deleteMessage('${m.id}')">Del</button>
+      </td>
+    </tr>`;
+  });
+  html += '</tbody></table>';
+  container.innerHTML = html;
+}
+
+async function viewMessage(id) {
+  const msg = _messagesData.find(m => m.id === id);
+  if (!msg) return;
+
+  // Auto-mark as read
+  if (!msg.read) {
+    await apiFetch(API + '/messages/' + id + '/read', { method: 'PUT', headers: getHeaders() });
+    msg.read = true;
+    renderMessages();
+    updateUnreadStats();
+    updateSidebarBadge();
+  }
+
+  const date = new Date(msg.createdAt).toLocaleString('en-IN', { day: 'numeric', month: 'short', year: 'numeric', hour: '2-digit', minute: '2-digit' });
+  const modal = document.getElementById('modalContent');
+  modal.innerHTML = `<div class="message-detail">
+    <h3>${esc(msg.subject)}</h3>
+    <div class="message-meta">
+      <strong>From:</strong> ${esc(msg.name)} &lt;${esc(msg.email)}&gt;<br>
+      <strong>Date:</strong> ${date}
+    </div>
+    <div class="message-body">${esc(msg.message)}</div>
+    <div class="modal-actions">
+      <button class="btn btn-secondary" onclick="closeModal()">Close</button>
+      <a href="mailto:${esc(msg.email)}?subject=Re: ${encodeURIComponent(msg.subject)}" class="btn btn-primary">Reply</a>
+    </div>
+  </div>`;
+  document.getElementById('modalOverlay').classList.add('active');
+}
+
+async function toggleRead(id, isRead) {
+  const endpoint = isRead ? '/unread' : '/read';
+  const result = await apiFetch(API + '/messages/' + id + endpoint, { method: 'PUT', headers: getHeaders() });
+  if (result && result.success) {
+    const msg = _messagesData.find(m => m.id === id);
+    if (msg) msg.read = !isRead;
+    renderMessages();
+    updateUnreadStats();
+    updateSidebarBadge();
+  }
+}
+
+async function deleteMessage(id) {
+  if (!confirm('Delete this message?')) return;
+  const result = await apiFetch(API + '/messages/' + id, { method: 'DELETE', headers: getHeaders() });
+  if (result && result.success) {
+    _messagesData = _messagesData.filter(m => m.id !== id);
+    renderMessages();
+    updateUnreadStats();
+    updateSidebarBadge();
+    showToast('Message deleted');
+  } else {
+    showToast('Failed to delete', true);
+  }
+}
+
+function updateUnreadStats() {
+  const unread = _messagesData.filter(m => !m.read).length;
+  const el = (id) => document.getElementById(id);
+  if (el('statTotal')) el('statTotal').textContent = _messagesData.length;
+  if (el('statUnread')) el('statUnread').textContent = unread;
+}
+
+// ===== Sidebar Unread Badge =====
+async function updateSidebarBadge() {
+  try {
+    let unread;
+    if (_messagesData && _messagesData.length !== undefined) {
+      unread = _messagesData.filter(m => !m.read).length;
+    } else {
+      const data = await apiFetch(API + '/messages');
+      if (!data) return;
+      unread = data.unreadCount || 0;
+    }
+    const msgLink = document.querySelector('.sidebar-nav a[href="/admin/messages"]');
+    if (!msgLink) return;
+    let badge = msgLink.querySelector('.sidebar-badge');
+    if (unread > 0) {
+      if (!badge) {
+        badge = document.createElement('span');
+        badge.className = 'sidebar-badge';
+        msgLink.appendChild(badge);
+      }
+      badge.textContent = unread;
+    } else if (badge) {
+      badge.remove();
+    }
+  } catch {}
+}
+
+// Load sidebar badge on any admin page after auth
+(function() {
+  const origCheckAuth = checkAuth;
+  checkAuth = async function() {
+    const result = await origCheckAuth();
+    if (result) {
+      // Fetch unread count for sidebar badge
+      try {
+        const data = await fetch(API + '/messages', { headers: getHeaders() });
+        if (data.ok) {
+          const json = await data.json();
+          const unread = json.unreadCount || 0;
+          const msgLink = document.querySelector('.sidebar-nav a[href="/admin/messages"]');
+          if (msgLink && unread > 0) {
+            let badge = msgLink.querySelector('.sidebar-badge');
+            if (!badge) {
+              badge = document.createElement('span');
+              badge.className = 'sidebar-badge';
+              msgLink.appendChild(badge);
+            }
+            badge.textContent = unread;
+          }
+        }
+      } catch {}
+    }
+    return result;
+  };
+})();
 
 // ===== Utility =====
 function esc(str) {

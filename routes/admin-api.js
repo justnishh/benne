@@ -220,6 +220,56 @@ router.delete('/media/:filename', authMiddleware, (req, res) => {
   } catch (e) { res.status(500).json({ error: 'Failed to delete file' }); }
 });
 
+// ========== MESSAGES ==========
+router.get('/messages', authMiddleware, (req, res) => {
+  try {
+    const data = readData('messages.json');
+    const unreadCount = data.messages.filter(m => !m.read).length;
+    res.json({ messages: data.messages, unreadCount });
+  } catch (e) {
+    res.status(500).json({ error: 'Failed to load messages' });
+  }
+});
+
+router.put('/messages/:id/read', authMiddleware, (req, res) => {
+  try {
+    const data = readData('messages.json');
+    const msg = data.messages.find(m => m.id === req.params.id);
+    if (!msg) return res.status(404).json({ error: 'Message not found' });
+    msg.read = true;
+    writeData('messages.json', data);
+    res.json({ success: true });
+  } catch (e) {
+    res.status(500).json({ error: 'Failed to update message' });
+  }
+});
+
+router.put('/messages/:id/unread', authMiddleware, (req, res) => {
+  try {
+    const data = readData('messages.json');
+    const msg = data.messages.find(m => m.id === req.params.id);
+    if (!msg) return res.status(404).json({ error: 'Message not found' });
+    msg.read = false;
+    writeData('messages.json', data);
+    res.json({ success: true });
+  } catch (e) {
+    res.status(500).json({ error: 'Failed to update message' });
+  }
+});
+
+router.delete('/messages/:id', authMiddleware, (req, res) => {
+  try {
+    const data = readData('messages.json');
+    const idx = data.messages.findIndex(m => m.id === req.params.id);
+    if (idx === -1) return res.status(404).json({ error: 'Message not found' });
+    data.messages.splice(idx, 1);
+    writeData('messages.json', data);
+    res.json({ success: true });
+  } catch (e) {
+    res.status(500).json({ error: 'Failed to delete message' });
+  }
+});
+
 // ========== PASSWORD CHANGE ==========
 router.put('/password', authMiddleware, (req, res) => {
   try {
