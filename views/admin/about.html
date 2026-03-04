@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Edit About — Benne Admin</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/admin.css">
+  <link rel="icon" type="image/png" href="/images/favicon.png">
+</head>
+<body>
+  <div class="admin-layout">
+    <nav class="sidebar">
+      <div class="sidebar-logo"><h2>Benne</h2><span>Admin Panel</span></div>
+      <ul class="sidebar-nav">
+        <li><a href="/admin/dashboard">Dashboard</a></li>
+        <div class="divider"></div>
+        <li><a href="/admin/home">Home Page</a></li>
+        <li><a href="/admin/menu">Menu</a></li>
+        <li><a href="/admin/about" class="active">About Page</a></li>
+        <li><a href="/admin/contact">Contact Page</a></li>
+        <li><a href="/admin/faq">FAQs</a></li>
+        <li><a href="/admin/privacy">Privacy Policy</a></li>
+        <li><a href="/admin/terms">Terms</a></li>
+        <div class="divider"></div>
+        <li><a href="/admin/settings">Settings</a></li>
+        <li><a href="/admin/media">Media Library</a></li>
+        <div class="divider"></div>
+        <li><a href="#" onclick="logout()">Logout</a></li>
+      </ul>
+    </nav>
+    <main class="main-content">
+      <h1 class="page-title">About Page</h1>
+      <p class="page-subtitle">Edit story, quote, darshini format, journey, and founders.</p>
+
+      <form id="aboutForm">
+        <div class="admin-card">
+          <h3>Page Header</h3>
+          <div class="form-row">
+            <div class="form-group"><label>Title</label><input id="aboutPageTitle"></div>
+            <div class="form-group"><label>Subtitle</label><input id="aboutPageSubtitle"></div>
+          </div>
+        </div>
+
+        <div class="admin-card">
+          <h3>The Story</h3>
+          <div class="form-group"><label>Heading (HTML)</label><input id="storyHeading"></div>
+          <div class="form-group"><label>Image Path</label><input id="storyImage"></div>
+          <div class="form-group"><label>Paragraphs (separate with blank line)</label><textarea id="storyParagraphs" style="min-height:200px"></textarea></div>
+        </div>
+
+        <div class="admin-card">
+          <h3>Quote</h3>
+          <div class="form-group"><label>Quote Text</label><textarea id="quoteText"></textarea></div>
+          <div class="form-group"><label>Citation</label><input id="quoteCite"></div>
+        </div>
+
+        <div class="admin-card">
+          <h3>Darshini Format</h3>
+          <div class="form-row">
+            <div class="form-group"><label>Heading</label><input id="darshiniHeading"></div>
+            <div class="form-group"><label>Subtitle</label><input id="darshiniSubtitle"></div>
+          </div>
+          <div id="darshiniItems"></div>
+          <button type="button" class="btn btn-sm btn-secondary" onclick="addDarshini()" style="margin-top:8px">+ Add Item</button>
+        </div>
+
+        <div class="admin-card">
+          <h3>The Journey</h3>
+          <div class="form-group"><label>Heading</label><input id="journeyHeading"></div>
+          <div id="milestoneItems"></div>
+          <button type="button" class="btn btn-sm btn-secondary" onclick="addMilestone()" style="margin-top:8px">+ Add Milestone</button>
+        </div>
+
+        <div class="admin-card">
+          <h3>Founders</h3>
+          <div class="form-group"><label>Section Heading</label><input id="foundersHeading"></div>
+          <div id="founderCards"></div>
+          <button type="button" class="btn btn-sm btn-secondary" onclick="addFounder()" style="margin-top:8px">+ Add Founder</button>
+          <div class="form-group" style="margin-top:16px"><label>Also Visited By (HTML)</label><textarea id="alsoVisited"></textarea></div>
+        </div>
+
+        <div class="admin-card">
+          <h3>CTA Section</h3>
+          <div class="form-row">
+            <div class="form-group"><label>Heading</label><input id="aboutCtaHeading"></div>
+            <div class="form-group"><label>Subtitle</label><input id="aboutCtaSubtitle"></div>
+          </div>
+        </div>
+
+        <button type="submit" class="btn btn-primary">Save About Page</button>
+        <a href="/about.html" target="_blank" class="btn btn-secondary" style="margin-left:10px">Preview</a>
+      </form>
+    </main>
+  </div>
+  <script src="/js/admin.js"></script>
+  <script>initAboutEditor();</script>
+</body>
+</html>

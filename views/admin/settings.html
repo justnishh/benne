@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Settings — Benne Admin</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/admin.css">
+  <link rel="icon" type="image/png" href="/images/favicon.png">
+</head>
+<body>
+  <div class="admin-layout">
+    <nav class="sidebar">
+      <div class="sidebar-logo"><h2>Benne</h2><span>Admin Panel</span></div>
+      <ul class="sidebar-nav">
+        <li><a href="/admin/dashboard">Dashboard</a></li>
+        <div class="divider"></div>
+        <li><a href="/admin/home">Home Page</a></li>
+        <li><a href="/admin/menu">Menu</a></li>
+        <li><a href="/admin/about">About Page</a></li>
+        <li><a href="/admin/contact">Contact Page</a></li>
+        <li><a href="/admin/faq">FAQs</a></li>
+        <li><a href="/admin/privacy">Privacy Policy</a></li>
+        <li><a href="/admin/terms">Terms</a></li>
+        <div class="divider"></div>
+        <li><a href="/admin/settings" class="active">Settings</a></li>
+        <li><a href="/admin/media">Media Library</a></li>
+        <div class="divider"></div>
+        <li><a href="#" onclick="logout()">Logout</a></li>
+      </ul>
+    </nav>
+    <main class="main-content">
+      <h1 class="page-title">Settings</h1>
+      <p class="page-subtitle">Global site settings, colors, footer, and cookie banner.</p>
+
+      <form id="settingsForm">
+        <div class="admin-card">
+          <h3>Site Identity</h3>
+          <div class="form-row">
+            <div class="form-group"><label>Site Name</label><input id="siteName"></div>
+            <div class="form-group"><label>Tagline</label><input id="siteTagline"></div>
+          </div>
+          <div class="form-row">
+            <div class="form-group"><label>Logo Path</label><input id="siteLogo"></div>
+            <div class="form-group"><label>Favicon Path</label><input id="siteFavicon"></div>
+          </div>
+        </div>
+
+        <div class="admin-card">
+          <h3>Colors</h3>
+          <p style="font-size:0.82rem;color:var(--coffee-light);margin-bottom:16px">Changes apply when visitors load the site.</p>
+          <div id="colorsContainer"></div>
+        </div>
+
+        <div class="admin-card">
+          <h3>Cookie Banner</h3>
+          <div class="form-group"><label>Heading</label><input id="cookieHeading"></div>
+          <div class="form-group"><label>Text</label><textarea id="cookieText"></textarea></div>
+          <div class="form-row">
+            <div class="form-group"><label>Accept Button</label><input id="cookieAcceptBtn"></div>
+            <div class="form-group"><label>Decline Button</label><input id="cookieDeclineBtn"></div>
+          </div>
+        </div>
+
+        <div class="admin-card">
+          <h3>Footer</h3>
+          <div class="form-group"><label>Description</label><textarea id="footerDesc"></textarea></div>
+          <div class="form-group"><label>Copyright (HTML)</label><input id="footerCopyright"></div>
+        </div>
+
+        <button type="submit" class="btn btn-primary">Save Settings</button>
+      </form>
+
+      <div class="admin-card" style="margin-top:32px">
+        <h3>Change Password</h3>
+        <form id="passwordForm">
+          <div class="form-group"><label>Current Password</label><input type="password" id="currentPassword" required></div>
+          <div class="form-row">
+            <div class="form-group"><label>New Password</label><input type="password" id="newPassword" required></div>
+            <div class="form-group"><label>Confirm Password</label><input type="password" id="confirmPassword" required></div>
+          </div>
+          <button type="submit" class="btn btn-primary">Change Password</button>
+        </form>
+      </div>
+    </main>
+  </div>
+  <script src="/js/admin.js"></script>
+  <script>initSettingsEditor(); initPasswordChange();</script>
+</body>
+</html>

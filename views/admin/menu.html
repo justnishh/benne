@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Edit Menu — Benne Admin</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/admin.css">
+  <link rel="icon" type="image/png" href="/images/favicon.png">
+</head>
+<body>
+  <div class="admin-layout">
+    <nav class="sidebar">
+      <div class="sidebar-logo"><h2>Benne</h2><span>Admin Panel</span></div>
+      <ul class="sidebar-nav">
+        <li><a href="/admin/dashboard">Dashboard</a></li>
+        <div class="divider"></div>
+        <li><a href="/admin/home">Home Page</a></li>
+        <li><a href="/admin/menu" class="active">Menu</a></li>
+        <li><a href="/admin/about">About Page</a></li>
+        <li><a href="/admin/contact">Contact Page</a></li>
+        <li><a href="/admin/faq">FAQs</a></li>
+        <li><a href="/admin/privacy">Privacy Policy</a></li>
+        <li><a href="/admin/terms">Terms</a></li>
+        <div class="divider"></div>
+        <li><a href="/admin/settings">Settings</a></li>
+        <li><a href="/admin/media">Media Library</a></li>
+        <div class="divider"></div>
+        <li><a href="#" onclick="logout()">Logout</a></li>
+      </ul>
+    </nav>
+    <main class="main-content">
+      <h1 class="page-title">Menu</h1>
+      <p class="page-subtitle">Manage categories and menu items. Changes are saved together.</p>
+
+      <form id="menuForm">
+        <div class="admin-card">
+          <h3>Page Header</h3>
+          <div class="form-row">
+            <div class="form-group"><label>Title</label><input id="menuPageTitle"></div>
+            <div class="form-group"><label>Subtitle</label><input id="menuPageSubtitle"></div>
+          </div>
+          <div class="form-group"><label>Footer Note</label><textarea id="menuFooterNote"></textarea></div>
+        </div>
+
+        <div class="admin-card">
+          <h3>Categories & Items</h3>
+          <div id="menuTabs" class="admin-tabs"></div>
+          <div id="menuItems"></div>
+        </div>
+
+        <button type="submit" class="btn btn-primary">Save Menu</button>
+        <a href="/menu.html" target="_blank" class="btn btn-secondary" style="margin-left:10px">Preview</a>
+      </form>
+    </main>
+  </div>
+
+  <div id="modalOverlay" class="modal-overlay">
+    <div id="modalContent" class="modal"></div>
+  </div>
+
+  <script src="/js/admin.js"></script>
+  <script>initMenuEditor();</script>
+</body>
+</html>

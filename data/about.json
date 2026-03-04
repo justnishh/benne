@@ -1,0 +1,67 @@
+{
+  "pageTitle": "Our Story",
+  "pageSubtitle": "From Bangalore nostalgia to Mumbai's most-loved dosa spot",
+  "story": {
+    "heading": "Born from nostalgia,<br>built with love",
+    "image": "images/founders.webp",
+    "imageAlt": "Benne",
+    "paragraphs": [
+      "<strong>Akhil Iyer</strong> is an actor-producer from Bengaluru. Every time he flew back home, his first stop was a humble darshini on Avenue Road for a benne dosa. After 11 years in Mumbai, he couldn't find anything that came close.",
+      "He tried convincing Bangalore restaurateurs to open in Mumbai. Nobody was interested. So he and <strong>Shriya Narayan</strong> — a psychologist and his partner — decided to do it themselves. Zero F&B experience.",
+      "Akhil trained under a dosa master on Avenue Road. Batter consistency, timing, the whole craft. Months of testing in their kitchen followed.",
+      "In <strong>May 2024</strong>, they opened a 275-square-foot space in Bandra. Standing tables, no chairs, self-service — a real darshini. Queues formed from day one."
+    ]
+  },
+  "quote": {
+    "text": "\"Great dosas depend on honor, respect, and care invested in its making.\"",
+    "cite": "— Akhil Iyer & Shriya Narayan, Founders"
+  },
+  "darshini": {
+    "heading": "The darshini format",
+    "subtitle": "We didn't just bring the dosa. We brought the entire culture.",
+    "items": [
+      { "title": "Standing tables only", "description": "No chairs. Stand, eat, leave — the darshini way." },
+      { "title": "Quirky nicknames", "description": "You're called \"Sultanpalya Shakir\" or \"Koramangala Karthik\" — not a number." },
+      { "title": "Quick self-service", "description": "Made to order. Served in minutes. No fuss." },
+      { "title": "275 square feet", "description": "One tiny space. One legendary dosa." },
+      { "title": "100% vegetarian", "description": "Pure veg, like every darshini in Bangalore." }
+    ]
+  },
+  "journey": {
+    "heading": "The journey",
+    "milestones": [
+      { "year": "Early 2024", "text": "Akhil trains on Bengaluru's Avenue Road under a dosa master." },
+      { "year": "May 2024", "text": "Benne opens in Bandra West. 275 sq ft, standing tables, instant queues." },
+      { "year": "Mid 2024", "text": "Deepika Padukone, Ranveer Singh, Anushka Sharma, Virat Kohli visit. Media coverage explodes." },
+      { "year": "March 2025", "text": "Second location opens on Gulmohar Road, Juhu." }
+    ]
+  },
+  "founders": {
+    "heading": "The founders",
+    "cards": [
+      {
+        "name": "Akhil Iyer",
+        "role": "Co-Founder · Actor-Producer",
+        "image": "images/akhil-iyer.jpg",
+        "imageAlt": "Akhil Iyer",
+        "bio": "Bengaluru native who spent 11 years in Mumbai missing darshini dosas. Trained on Avenue Road to master the craft. Turned homesickness into a restaurant."
+      },
+      {
+        "name": "Shriya Narayan",
+        "role": "Co-Founder · Psychologist",
+        "image": "images/shriya-narayan.jpg",
+        "imageAlt": "Shriya Narayan",
+        "bio": "Believes food is comfort, connection, and home. Brought the heart, the soul, and the business sense to every decision at Benne."
+      }
+    ],
+    "alsoVisited": "<strong style=\"color: var(--coffee);\">Also visited by:</strong> Dia Mirza, Masaba Gupta, and thousands of dosa lovers across Mumbai."
+  },
+  "cta": {
+    "heading": "Ready to taste it?",
+    "subtitle": "Browse the menu or come visit us in person.",
+    "buttons": [
+      { "label": "View Menu", "href": "menu.html", "style": "primary" },
+      { "label": "Get Directions", "href": "contact.html", "style": "secondary" }
+    ]
+  }
+}

@@ -1,0 +1,59 @@
+{
+  "siteName": "Benne",
+  "tagline": "Heritage Bangalore Dosa, Mumbai",
+  "logo": "images/logo.webp",
+  "favicon": "images/favicon.png",
+  "colors": {
+    "coffee": "#3B2A23",
+    "cream": "#F6E7C1",
+    "teal": "#2F5D50",
+    "terra": "#C65D3B",
+    "charcoal": "#2A2A2A",
+    "creamLight": "#FBF4E4",
+    "creamBg": "#FAF3E7",
+    "coffeeLight": "#5C4033",
+    "tealLight": "#3A7365",
+    "border": "#E8DECE"
+  },
+  "navbar": {
+    "links": [
+      { "label": "Home", "href": "index.html" },
+      { "label": "Menu", "href": "menu.html" },
+      { "label": "About", "href": "about.html" },
+      { "label": "Contact", "href": "contact.html" }
+    ]
+  },
+  "footer": {
+    "description": "Heritage Bangalore Dosa. Authentic Davangere-style benne dosas in Mumbai since May 2024.",
+    "navigate": [
+      { "label": "Home", "href": "index.html" },
+      { "label": "Menu", "href": "menu.html" },
+      { "label": "Our Story", "href": "about.html" },
+      { "label": "Visit Us", "href": "contact.html" }
+    ],
+    "legal": [
+      { "label": "Terms & Conditions", "href": "terms.html" },
+      { "label": "Privacy Policy", "href": "privacy.html" },
+      { "label": "FAQs", "href": "faq.html" }
+    ],
+    "contact": [
+      { "label": "hello@shimowfoods.com", "href": "mailto:hello@shimowfoods.com" },
+      { "label": "+91 90049 88941", "href": "https://wa.me/919004988941", "external": true },
+      { "label": "+91 90046 76941", "href": "tel:+919004676941" }
+    ],
+    "copyright": "&copy; 2026 Benne &middot; Shimow Hospitality Pvt. Ltd.",
+    "socials": [
+      { "label": "Instagram", "href": "https://instagram.com/benne.bombay" },
+      { "label": "Zomato", "href": "https://www.zomato.com/mumbai/benne-pali-hill-bandra-west" },
+      { "label": "benne.in", "href": "https://benne.in" }
+    ]
+  },
+  "cookieBanner": {
+    "heading": "We serve cookies too — but the digital kind.",
+    "text": "Unlike our benne dosas, these cookies aren't crispy, buttery, or worth standing in line for. They just help our website work better. No personal data is sold — ever. That's a promise stronger than our filter coffee.",
+    "acceptBtn": "Yes, serve me cookies",
+    "declineBtn": "No thanks, just dosas",
+    "acceptToast": "Cookies accepted — now go order a real one.",
+    "declineToast": "No cookies for you — more sambar for us."
+  }
+}

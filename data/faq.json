@@ -1,0 +1,77 @@
+{
+  "pageTitle": "FAQs",
+  "pageSubtitle": "Common questions about our restaurant, website, and your data",
+  "categories": [
+    {
+      "name": "Restaurant",
+      "items": [
+        {
+          "question": "What are your opening hours?",
+          "answer": "<strong>Bandra West:</strong> Tue–Sat 7 AM – 3:30 PM & 5 – 11:30 PM. Sunday 7 AM – 4 PM & 5 – 11:30 PM. Monday closed.<br><strong>Juhu:</strong> Check <a href=\"https://instagram.com/benne.bombay\" target=\"_blank\" rel=\"noopener\">@benne.bombay</a> on Instagram for latest timings."
+        },
+        {
+          "question": "Where are you located?",
+          "answer": "<strong>Bandra West:</strong> Shop no. 1, Plot 85, TPS 3, Louis Bell Building, 16th Rd, opp. Shree Sagar, Bandra West, Mumbai 400050.<br><strong>Juhu:</strong> Ground floor, Nirav Apartment, 1, Gulmohar Rd, next to IDFC First Bank, Juhu, Mumbai 400049."
+        },
+        {
+          "question": "Is the food 100% vegetarian?",
+          "answer": "Yes. Benne is a fully vegetarian restaurant. We do not serve eggs, meat, or seafood — just like the darshinis in Bangalore that inspired us."
+        },
+        {
+          "question": "Do you take reservations?",
+          "answer": "No. We operate on a walk-in basis only, in the true darshini style. There are standing tables and no chairs — it's quick, authentic, and part of the experience."
+        },
+        {
+          "question": "What is a \"darshini\"?",
+          "answer": "A darshini is a type of quick-service vegetarian restaurant common in Bangalore. Standing tables, self-service, no frills — just great food served fast. We've brought that same format to Mumbai."
+        },
+        {
+          "question": "Do you offer takeaway or delivery?",
+          "answer": "We primarily focus on dine-in. Takeaway availability may vary by location. We are also listed on <a href=\"https://www.zomato.com/mumbai/benne-pali-hill-bandra-west\" target=\"_blank\" rel=\"noopener\">Zomato</a> — check there for delivery options."
+        },
+        {
+          "question": "How much does a meal cost?",
+          "answer": "An average meal costs ₹200–400 per person. Our dosas start from ₹100 and filter coffee is ₹40."
+        }
+      ]
+    },
+    {
+      "name": "Data & Privacy",
+      "items": [
+        {
+          "question": "What personal data do you collect?",
+          "answer": "Only what you voluntarily provide through our contact form: your name, email, subject, and message. We also collect basic server logs (IP address, browser type). That's it."
+        },
+        {
+          "question": "Do you sell my data to third parties?",
+          "answer": "<strong>No. Never.</strong> Your data is confidential and will never be sold, rented, or shared with any third party for marketing or commercial purposes. Read our full <a href=\"privacy.html\">Privacy Policy</a> for details."
+        },
+        {
+          "question": "How can I get my data deleted?",
+          "answer": "Email us at <a href=\"mailto:hello@shimowfoods.com\">hello@shimowfoods.com</a> with your request. Under the DPDP Act 2023, you have the right to request erasure of your personal data. We'll process your request within 30 days."
+        },
+        {
+          "question": "How long do you keep my data?",
+          "answer": "Contact form submissions are retained for up to 12 months, then permanently deleted. You can request earlier deletion at any time."
+        }
+      ]
+    },
+    {
+      "name": "Website",
+      "items": [
+        {
+          "question": "Does this website use cookies?",
+          "answer": "We don't use first-party tracking cookies. However, our Contact page embeds Google Maps, which may set third-party cookies under <a href=\"https://policies.google.com/privacy\" target=\"_blank\" rel=\"noopener\">Google's Privacy Policy</a>."
+        },
+        {
+          "question": "Are there third-party links on this site?",
+          "answer": "Yes — we link to Google Maps, Instagram, Zomato, and WhatsApp. These are governed by their own terms and privacy policies. We are not responsible for their content or practices."
+        },
+        {
+          "question": "Who operates this website?",
+          "answer": "This website is operated by Shimow Hospitality Pvt. Ltd., the company behind Benne. For any queries, email <a href=\"mailto:hello@shimowfoods.com\">hello@shimowfoods.com</a>."
+        }
+      ]
+    }
+  ]
+}

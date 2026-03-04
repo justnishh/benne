@@ -1,0 +1,54 @@
+{
+  "pageTitle": "Visit Us",
+  "pageSubtitle": "Two locations in Mumbai, one legendary dosa",
+  "locations": [
+    {
+      "name": "Bandra West",
+      "label": "Original",
+      "address": "Shop no. 1, Plot 85, TPS 3, Louis Bell Building, 16th Rd, opposite Shree Sagar, Bandra West, Mumbai, Maharashtra 400050",
+      "hours": [
+        "Tue–Sat: 7 AM – 3:30 PM & 5 – 11:30 PM",
+        "Sunday: 7 AM – 4 PM & 5 – 11:30 PM · Monday: Closed"
+      ],
+      "phone": { "label": "+91 90046 76941", "href": "tel:+919004676941" },
+      "mapEmbed": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d60336.4196729228!2d72.75468349456787!3d19.062584346819346!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7c9c16aa7a73b%3A0x11a01744c567af3b!2sBenne%20-%20Heritage%20Bangalore%20Dosa!5e0!3m2!1sen!2sin!4v1772438308862!5m2!1sen!2sin"
+    },
+    {
+      "name": "Juhu",
+      "label": "Since Mar 2025",
+      "address": "Ground floor, Nirav Apartment, 1, Gulmohar Rd, next to IDFC First Bank, Gulmohar Colony, Juhu, Mumbai, Maharashtra 400049",
+      "hours": [
+        "Check <a href=\"https://instagram.com/benne.bombay\" target=\"_blank\" rel=\"noopener\">@benne.bombay</a> for latest timings"
+      ],
+      "phone": null,
+      "mapEmbed": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15079.217684275418!2d72.81329780817028!3d19.116234072955336!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7c98ffc58bccd%3A0x37756e083f877e45!2sBenne%20-%20Heritage%20Bangalore%20Dosa!5e0!3m2!1sen!2sin!4v1772438062092!5m2!1sen!2sin"
+    }
+  ],
+  "contactInfo": [
+    { "label": "Email", "text": "hello@shimowfoods.com", "href": "mailto:hello@shimowfoods.com", "external": false },
+    { "label": "WhatsApp", "text": "+91 90049 88941", "href": "https://wa.me/919004988941", "external": true },
+    { "label": "Instagram", "text": "@benne.bombay", "href": "https://instagram.com/benne.bombay", "external": true },
+    { "label": "Zomato", "text": "Benne on Zomato", "href": "https://www.zomato.com/mumbai/benne-pali-hill-bandra-west", "external": true }
+  ],
+  "form": {
+    "heading": "Send us a message",
+    "subtitle": "Questions, feedback, or just want to say hi — we'd love to hear from you.",
+    "subjects": [
+      "General Inquiry",
+      "Franchise Opportunities",
+      "Internship",
+      "Full-time Employment",
+      "Catering & Events",
+      "Feedback"
+    ]
+  },
+  "workWithUs": {
+    "heading": "Work with us",
+    "subtitle": "Interested in joining the team or bringing Benne to your city?",
+    "links": [
+      { "label": "Internship", "href": "mailto:hello@shimowfoods.com?subject=Internship%20Inquiry" },
+      { "label": "Full-Time", "href": "mailto:hello@shimowfoods.com?subject=Employment%20Inquiry" },
+      { "label": "Franchise", "href": "mailto:hello@shimowfoods.com?subject=Franchise%20Inquiry" }
+    ]
+  }
+}

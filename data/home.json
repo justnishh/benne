@@ -1,0 +1,66 @@
+{
+  "hero": {
+    "heading": "Heritage Bangalore",
+    "headingAccent": "Dosa",
+    "description": "Authentic Davangere-style benne dosas — crispy, buttery, and made with the kind of care that turns a meal into a memory.",
+    "tagline": "\"Benne\" means butter in Kannada",
+    "image": "images/benne-dosa.webp",
+    "imageAlt": "Benne Dosa",
+    "cta1": { "label": "View Menu", "href": "menu.html" },
+    "cta2": { "label": "Our Story", "href": "about.html" }
+  },
+  "knownFor": {
+    "heading": "What we're known for",
+    "subtitle": "Simple food done right. The way Bangalore's darshinis have been doing it for decades.",
+    "cards": [
+      {
+        "title": "The Benne Dosa",
+        "description": "Crispy Davangere-style, generously smeared with white butter. The dish that started it all. From ₹120.",
+        "image": "images/benne-dosa.webp",
+        "imageAlt": "Benne Dosa",
+        "link": "menu.html"
+      },
+      {
+        "title": "Filter Coffee",
+        "description": "Strong, frothy, aromatic. Brewed the traditional South Indian way. ₹40 a cup.",
+        "image": "images/filter-coffee.webp",
+        "imageAlt": "Filter Coffee",
+        "link": "menu.html"
+      },
+      {
+        "title": "The Darshini Way",
+        "description": "Standing tables, quick service, quirky nicknames instead of order numbers. An experience, not just a meal.",
+        "image": "images/darshini-style.webp",
+        "imageAlt": "The Darshini Experience",
+        "link": "about.html"
+      }
+    ]
+  },
+  "locations": {
+    "heading": "Find us in Mumbai",
+    "items": [
+      {
+        "name": "Bandra West",
+        "address": "Shop no. 1, Plot 85, TPS 3, Louis Bell Building, 16th Rd, opp. Shree Sagar, Bandra West, Mumbai 400050",
+        "hours": "Tue–Sat: 7 AM – 3:30 PM & 5 – 11:30 PM\nSunday: 7 AM – 4 PM & 5 – 11:30 PM · Monday: Closed",
+        "label": "Our original location"
+      },
+      {
+        "name": "Juhu",
+        "address": "Ground floor, Nirav Apartment, 1, Gulmohar Rd, next to IDFC First Bank, Juhu, Mumbai 400049",
+        "hours": "Check <a href=\"https://instagram.com/benne.bombay\" target=\"_blank\" rel=\"noopener\" style=\"color: var(--teal); text-decoration: underline;\">@benne.bombay</a> for latest timings",
+        "label": "Open since March 2025"
+      }
+    ]
+  },
+  "socialProof": {
+    "featured": "Featured in The Hindu · Indian Express · Times Now · NDTV",
+    "stats": "4.3 on Google · 1400+ reviews · 100% Vegetarian"
+  },
+  "cta": {
+    "heading": "Craving a dosa?",
+    "subtitle": "Average meal ₹200–400 per person. Walk in, no reservations needed.",
+    "buttonLabel": "Explore the Menu",
+    "buttonLink": "menu.html"
+  }
+}

@@ -1,0 +1,103 @@
+{
+  "pageTitle": "The Menu",
+  "pageSubtitle": "100% vegetarian · Heritage Bangalore recipes · Avg. ₹200–400 per person",
+  "categories": [
+    {
+      "id": "dosa",
+      "name": "Dosa",
+      "items": [
+        { "name": "Classic Benne Dosa", "description": "Crispy Davangere-style, white butter", "price": "₹120" },
+        { "name": "Benne Masala Dosa", "description": "Butter dosa, spiced potato filling", "price": "₹140" },
+        { "name": "Podi Plain Dosa", "description": "Gunpowder podi dusted", "price": "₹130" },
+        { "name": "Podi Masala Dosa", "description": "Podi + masala potato filling", "price": "₹140" },
+        { "name": "Garlic Roast Dosa", "description": "Crispy roast, garlic, butter", "price": "₹150" },
+        { "name": "Cheese Benne Dosa", "description": "Melted cheese loaded", "price": "₹160" },
+        { "name": "Onion Benne Dosa", "description": "Crispy onion topping", "price": "₹130" },
+        { "name": "Ghee Roast Dosa", "description": "Golden ghee-roasted", "price": "₹150" },
+        { "name": "Mysore Masala Dosa", "description": "Red chutney, potato masala", "price": "₹135" },
+        { "name": "Rava Dosa", "description": "Crispy semolina crepe", "price": "₹115" },
+        { "name": "Paper Dosa", "description": "Ultra-thin, extra crispy", "price": "₹110" },
+        { "name": "Set Dosa (2 pcs)", "description": "Soft, spongy", "price": "₹100" }
+      ]
+    },
+    {
+      "id": "idli",
+      "name": "Idli & Vada",
+      "items": [
+        { "name": "Idli (3 pcs)", "description": "Steamed, sambar & chutney", "price": "₹80" },
+        { "name": "Medu Vada (2 pcs)", "description": "Crispy urad dal fritters", "price": "₹85" },
+        { "name": "Idli Vada Combo", "description": "One of each", "price": "₹95" },
+        { "name": "Sambar Vada", "description": "Vada dunked in sambar", "price": "₹90" },
+        { "name": "Ghee Idli", "description": "Drizzled with fragrant ghee", "price": "₹90" },
+        { "name": "Ghee Podi Idli", "description": "Ghee + gunpowder podi", "price": "₹100" },
+        { "name": "Thatte Idli", "description": "Large, flat Karnataka-style", "price": "₹90" },
+        { "name": "Ghee Podi Thatte Idli", "description": "The ultimate thatte idli", "price": "₹110" }
+      ]
+    },
+    {
+      "id": "specials",
+      "name": "Specials",
+      "items": [
+        { "name": "Akki Roti", "description": "Rice flour roti, herbs", "price": "₹95" },
+        { "name": "Ragi Roti", "description": "Finger millet flatbread", "price": "₹95" },
+        { "name": "Mangalore Buns", "description": "Banana-flavoured, deep-fried", "price": "₹85" },
+        { "name": "Uttapam", "description": "Thick rice pancake", "price": "₹95" },
+        { "name": "Onion Uttapam", "description": "Crispy onion topping", "price": "₹105" },
+        { "name": "Pesarattu", "description": "Green gram dosa", "price": "₹115" },
+        { "name": "Mysore Pak", "description": "Gram flour & ghee sweet", "price": "₹60" },
+        { "name": "Badam Halwa", "description": "Warm almond halwa", "price": "₹70" },
+        { "name": "Kesari Bath", "description": "Saffron semolina pudding", "price": "₹60" }
+      ]
+    },
+    {
+      "id": "rice",
+      "name": "Rice & Tiffin",
+      "items": [
+        { "name": "Bisi Bele Bath", "description": "Spicy rice & lentil", "price": "₹125" },
+        { "name": "Sambar Rice", "description": "Rice with aromatic sambar", "price": "₹110" },
+        { "name": "Curd Rice", "description": "Yogurt rice, comfort classic", "price": "₹90" },
+        { "name": "Lemon Rice", "description": "Tangy, tempered", "price": "₹95" },
+        { "name": "Puliyogare", "description": "Tamarind rice", "price": "₹100" },
+        { "name": "Vangibath", "description": "Spiced brinjal rice", "price": "₹115" },
+        { "name": "Pongal", "description": "Rice, dal, pepper, ghee", "price": "₹85" },
+        { "name": "Upma", "description": "Semolina, cashews", "price": "₹75" },
+        { "name": "Poha", "description": "Flattened rice, peanuts", "price": "₹70" }
+      ]
+    },
+    {
+      "id": "beverages",
+      "name": "Drinks",
+      "items": [
+        { "name": "Filter Coffee", "description": "Strong, aromatic, frothy", "price": "₹40" },
+        { "name": "Iced Filter Coffee", "description": "Chilled filter coffee", "price": "₹50" },
+        { "name": "Vegan Filter Coffee", "description": "Plant-based milk", "price": "₹50" },
+        { "name": "Iced Vegan Coffee", "description": "Chilled, vegan-friendly", "price": "₹60" },
+        { "name": "Masala Chai", "description": "Spiced Indian tea", "price": "₹30" },
+        { "name": "Badam Milk", "description": "Almond-saffron", "price": "₹60" },
+        { "name": "Buttermilk", "description": "Spiced chaas", "price": "₹35" },
+        { "name": "Horlicks / Iced", "description": "Hot or cold", "price": "₹45 / ₹55" },
+        { "name": "Bournvita / Iced", "description": "Hot or cold", "price": "₹45 / ₹55" },
+        { "name": "Mango Lassi", "description": "Thick, creamy", "price": "₹70" },
+        { "name": "Fresh Lime Soda", "description": "Sweet or salted", "price": "₹40" }
+      ]
+    },
+    {
+      "id": "combos",
+      "name": "Combos",
+      "items": [
+        { "name": "Breakfast Combo 1", "description": "Idli + Vada + Filter Coffee", "price": "₹130" },
+        { "name": "Breakfast Combo 2", "description": "Dosa + Vada + Filter Coffee", "price": "₹150" },
+        { "name": "Mini Meal", "description": "Rice, Sambar, Rasam, Curd, Papad", "price": "₹160" },
+        { "name": "Full South Indian Meal", "description": "Complete thali", "price": "₹250" },
+        { "name": "Family Pack", "description": "Assorted, feeds 3–4", "price": "₹500" }
+      ]
+    }
+  ],
+  "footerNote": "All items served with sambar, kempur chutney & coconut-coriander chutney. Add-ons: Extra Sambar ₹20 · Chutney ₹15 · Potato Masala ₹30",
+  "cta": {
+    "heading": "Come visit",
+    "subtitle": "Bandra West & Juhu, Mumbai",
+    "buttonLabel": "Get Directions",
+    "buttonLink": "contact.html"
+  }
+}

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Edit Home — Benne Admin</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/admin.css">
+  <link rel="icon" type="image/png" href="/images/favicon.png">
+</head>
+<body>
+  <div class="admin-layout">
+    <nav class="sidebar">
+      <div class="sidebar-logo"><h2>Benne</h2><span>Admin Panel</span></div>
+      <ul class="sidebar-nav">
+        <li><a href="/admin/dashboard">Dashboard</a></li>
+        <div class="divider"></div>
+        <li><a href="/admin/home" class="active">Home Page</a></li>
+        <li><a href="/admin/menu">Menu</a></li>
+        <li><a href="/admin/about">About Page</a></li>
+        <li><a href="/admin/contact">Contact Page</a></li>
+        <li><a href="/admin/faq">FAQs</a></li>
+        <li><a href="/admin/privacy">Privacy Policy</a></li>
+        <li><a href="/admin/terms">Terms</a></li>
+        <div class="divider"></div>
+        <li><a href="/admin/settings">Settings</a></li>
+        <li><a href="/admin/media">Media Library</a></li>
+        <div class="divider"></div>
+        <li><a href="#" onclick="logout()">Logout</a></li>
+      </ul>
+    </nav>
+    <main class="main-content">
+      <h1 class="page-title">Home Page</h1>
+      <p class="page-subtitle">Edit hero, cards, locations, social proof, and CTA sections.</p>
+
+      <form id="homeForm">
+        <div class="admin-card">
+          <h3>Hero Section</h3>
+          <div class="form-row">
+            <div class="form-group"><label>Heading</label><input id="heroHeading"></div>
+            <div class="form-group"><label>Accent Word</label><input id="heroAccent"></div>
+          </div>
+          <div class="form-group"><label>Description</label><textarea id="heroDesc"></textarea></div>
+          <div class="form-group"><label>Tagline</label><input id="heroTagline"></div>
+          <div class="form-group"><label>Hero Image Path</label><input id="heroImage"></div>
+          <div class="form-row">
+            <div class="form-group"><label>CTA 1 Label</label><input id="heroCta1Label"></div>
+            <div class="form-group"><label>CTA 1 Link</label><input id="heroCta1Href"></div>
+          </div>
+          <div class="form-row">
+            <div class="form-group"><label>CTA 2 Label</label><input id="heroCta2Label"></div>
+            <div class="form-group"><label>CTA 2 Link</label><input id="heroCta2Href"></div>
+          </div>
+        </div>
+
+        <div class="admin-card">
+          <h3>Known For Section</h3>
+          <div class="form-group"><label>Section Heading</label><input id="knownHeading"></div>
+          <div class="form-group"><label>Section Subtitle</label><textarea id="knownSubtitle"></textarea></div>
+          <div id="knownCards"></div>
+        </div>
+
+        <div class="admin-card">
+          <h3>Locations Section</h3>
+          <div class="form-group"><label>Section Heading</label><input id="locHeading"></div>
+          <div id="locationItems"></div>
+        </div>
+
+        <div class="admin-card">
+          <h3>Social Proof</h3>
+          <div class="form-group"><label>Featured In</label><input id="socialFeatured"></div>
+          <div class="form-group"><label>Stats</label><input id="socialStats"></div>
+        </div>
+
+        <div class="admin-card">
+          <h3>CTA Section</h3>
+          <div class="form-row">
+            <div class="form-group"><label>Heading</label><input id="ctaHeading"></div>
+            <div class="form-group"><label>Subtitle</label><input id="ctaSubtitle"></div>
+          </div>
+          <div class="form-row">
+            <div class="form-group"><label>Button Label</label><input id="ctaBtn"></div>
+            <div class="form-group"><label>Button Link</label><input id="ctaLink"></div>
+          </div>
+        </div>
+
+        <button type="submit" class="btn btn-primary">Save Home Page</button>
+        <a href="/" target="_blank" class="btn btn-secondary" style="margin-left:10px">Preview</a>
+      </form>
+    </main>
+  </div>
+  <script src="/js/admin.js"></script>
+  <script>initHomeEditor();</script>
+</body>
+</html>

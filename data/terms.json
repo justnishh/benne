@@ -1,0 +1,53 @@
+{
+  "pageTitle": "Terms & Conditions",
+  "pageSubtitle": "Please read these terms before using our website or visiting our restaurant",
+  "effectiveDate": "2 March 2026",
+  "lastUpdated": "2 March 2026",
+  "intro": "These terms and conditions govern your use of the Benne website and our restaurant services. By using this website or dining at our restaurant, you agree to be bound by these terms. Benne is operated by <strong>Shimow Hospitality Pvt. Ltd.</strong> (\"we\", \"us\", \"our\").",
+  "sections": [
+    {
+      "heading": "1. Website Usage",
+      "content": "<p>This website is provided for informational purposes — to share our menu, locations, and story. You may browse freely but may not:</p><ul><li>Reproduce, distribute, or commercially exploit any content without written permission</li><li>Use automated tools to scrape or extract data from this website</li><li>Attempt to interfere with the website's functionality or security</li></ul>"
+    },
+    {
+      "heading": "2. Restaurant Policies",
+      "content": "<ul><li><strong>100% Vegetarian:</strong> All food served at Benne is purely vegetarian. No eggs, meat, or seafood.</li><li><strong>No Reservations:</strong> We operate on a walk-in basis only. No advance bookings are accepted.</li><li><strong>Self-Service / Darshini Format:</strong> Standing tables, quick service, no table service. This is the authentic darshini experience.</li><li><strong>Dine-In Focus:</strong> We primarily serve dine-in customers. Takeaway availability may vary by location.</li></ul>"
+    },
+    {
+      "heading": "3. Menu & Pricing",
+      "content": "<p>Menu items, prices, and availability displayed on this website are indicative and <strong>subject to change without prior notice</strong>. In-restaurant prices and availability take precedence over website listings. Prices are inclusive of applicable taxes unless stated otherwise.</p>"
+    },
+    {
+      "heading": "4. FSSAI Compliance",
+      "content": "<p>Benne operates in full compliance with the <strong>Food Safety and Standards Authority of India (FSSAI)</strong> regulations. We maintain valid FSSAI licences for all our locations and adhere to prescribed food safety and hygiene standards.</p>"
+    },
+    {
+      "heading": "5. Intellectual Property",
+      "content": "<p>All content on this website — including the Benne brand name, logo, images, text, and design — is the intellectual property of Shimow Hospitality Pvt. Ltd. and is protected under Indian copyright and trademark law. Unauthorised use is prohibited.</p>"
+    },
+    {
+      "heading": "6. Consumer Protection",
+      "content": "<p>We are committed to fair business practices in accordance with the <strong>Consumer Protection Act, 2019</strong>. If you have a complaint about our food or service, please contact us directly and we will work to resolve it promptly.</p>"
+    },
+    {
+      "heading": "7. Limitation of Liability",
+      "content": "<p>This website is provided \"as is\" without warranties of any kind. We are not liable for:</p><ul><li>Temporary unavailability of the website</li><li>Inaccuracies in menu or pricing information on the website</li><li>Any loss arising from your use of third-party links or embedded services</li><li>Allergic reactions — please inform staff of any food allergies before ordering</li></ul>"
+    },
+    {
+      "heading": "8. Third-Party Links",
+      "content": "<p>This website contains links to third-party services (Google Maps, Instagram, Zomato, WhatsApp). These services are governed by their own terms and privacy policies. We are not responsible for their content or practices.</p>"
+    },
+    {
+      "heading": "9. Privacy",
+      "content": "<p>Your use of this website is also governed by our <a href=\"privacy.html\" style=\"color: var(--teal);\">Privacy Policy</a>, which details how we collect, use, and protect your personal data.</p>"
+    },
+    {
+      "heading": "10. Governing Law & Jurisdiction",
+      "content": "<p>These terms are governed by the laws of India. Any disputes shall be subject to the <strong>exclusive jurisdiction of the courts in Mumbai, Maharashtra</strong>.</p>"
+    },
+    {
+      "heading": "11. Contact",
+      "content": "<p>For questions about these terms, contact us at:</p><p><strong>Shimow Hospitality Pvt. Ltd.</strong><br>Email: <a href=\"mailto:hello@shimowfoods.com\" style=\"color: var(--teal);\">hello@shimowfoods.com</a><br>WhatsApp: <a href=\"https://wa.me/919004988941\" target=\"_blank\" rel=\"noopener\" style=\"color: var(--teal);\">+91 90049 88941</a></p>"
+    }
+  ]
+}
